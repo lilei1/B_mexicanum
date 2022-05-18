@@ -36,4 +36,9 @@ sbatch --array=0-1 -C haswell run_muscle.job
 
 ```
 
+### 4 build the tree with iqtree
 
+```
+./iqtree -s ~/plantbox/bscratch/llei2019/software/OG0020886.MSA.fasta -o OsKitaake03g033100 -redo -m GTR+I+G 
+
+```
