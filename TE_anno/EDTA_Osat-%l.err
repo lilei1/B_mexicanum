@@ -1,0 +1,178 @@
+Fri Apr  8 17:00:22 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Fri Apr  8 17:00:25 PDT 2022	Start to find LTR candidates.
+
+Fri Apr  8 17:00:25 PDT 2022	Identify LTR retrotransposon candidates from scratch.
+
+Fri Apr  8 17:24:19 PDT 2022	Finish finding LTR candidates.
+
+Fri Apr  8 17:24:20 PDT 2022	Start to find TIR candidates.
+
+Fri Apr  8 17:24:20 PDT 2022	Identify TIR candidates from scratch.
+
+Species: others
+Fri Apr  8 18:50:39 PDT 2022	Finish finding TIR candidates.
+
+Fri Apr  8 18:50:39 PDT 2022	Start to find Helitron candidates.
+
+Fri Apr  8 18:50:39 PDT 2022	Identify Helitron candidates from scratch.
+
+Fri Apr  8 21:22:31 PDT 2022	Finish finding Helitron candidates.
+
+Fri Apr  8 21:22:31 PDT 2022	Execution of EDTA_raw.pl is finished!
+
+2022-04-09 04:58:05,025 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-09 04:58:05,037 -INFO- VARS: {'sequence': 'OsativaKitaake_499_v3.0.fa.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'OsativaKitaake_499_v3.0.fa.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-09 04:58:05,037 -INFO- checking dependencies:
+2022-04-09 04:58:05,175 -INFO- hmmer	3.3.2	OK
+2022-04-09 04:58:05,246 -INFO- blastn	2.10.0+	OK
+2022-04-09 04:58:05,247 -INFO- check database rexdb
+2022-04-09 04:58:05,247 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-09 04:58:05,247 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-09 04:58:05,247 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-09 04:58:05,248 -INFO- Start classifying pipeline
+2022-04-09 04:58:05,269 -INFO- total 340 sequences
+2022-04-09 04:58:05,269 -INFO- translating `OsativaKitaake_499_v3.0.fa.mod.RM.consensi.fa` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-09 04:58:05,644 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-09 04:58:05,671 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-09 04:58:05,671 -INFO- Running on Python 3.6.13 linux
+2022-04-09 04:58:06,967 -INFO- pp local server started with 20 workers
+2022-04-09 04:58:07,128 -INFO- Task 0 started
+2022-04-09 04:58:07,130 -INFO- Task 1 started
+2022-04-09 04:58:07,130 -INFO- Task 2 started
+2022-04-09 04:58:07,131 -INFO- Task 3 started
+2022-04-09 04:58:07,131 -INFO- Task 4 started
+2022-04-09 04:58:07,132 -INFO- Task 5 started
+2022-04-09 04:58:07,133 -INFO- Task 6 started
+2022-04-09 04:58:07,134 -INFO- Task 7 started
+2022-04-09 04:58:07,134 -INFO- Task 8 started
+2022-04-09 04:58:07,135 -INFO- Task 9 started
+2022-04-09 04:58:07,136 -INFO- Task 10 started
+2022-04-09 04:58:07,136 -INFO- Task 11 started
+2022-04-09 04:58:07,137 -INFO- Task 12 started
+2022-04-09 04:58:07,137 -INFO- Task 13 started
+2022-04-09 04:58:07,138 -INFO- Task 14 started
+2022-04-09 04:58:07,139 -INFO- Task 15 started
+2022-04-09 04:58:07,139 -INFO- Task 16 started
+2022-04-09 04:58:07,140 -INFO- Task 17 started
+2022-04-09 04:58:07,140 -INFO- Task 18 started
+2022-04-09 04:58:07,141 -INFO- Task 19 started
+2022-04-09 04:58:09,675 -INFO- generating gene anntations
+2022-04-09 04:58:09,727 -INFO- 12 sequences classified by HMM
+2022-04-09 04:58:09,727 -INFO- see protein domain sequences in `OsativaKitaake_499_v3.0.fa.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `OsativaKitaake_499_v3.0.fa.mod.RM.consensi.fa.rexdb.dom.gff3`
+2022-04-09 04:58:09,731 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-09 04:58:09,743 -INFO- using the 80-80-80 rule
+2022-04-09 04:58:09,743 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-09 04:58:09,992 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-09 04:58:10,205 -INFO- 0 sequences classified in pass 2
+2022-04-09 04:58:10,205 -INFO- total 12 sequences classified.
+2022-04-09 04:58:10,205 -INFO- see classified sequences in `OsativaKitaake_499_v3.0.fa.mod.RM.consensi.fa.rexdb.cls.tsv`
+2022-04-09 04:58:10,205 -INFO- writing library for RepeatMasker in `OsativaKitaake_499_v3.0.fa.mod.RM.consensi.fa.rexdb.cls.lib`
+2022-04-09 04:58:10,227 -INFO- writing classified protein domains in `OsativaKitaake_499_v3.0.fa.mod.RM.consensi.fa.rexdb.cls.pep`
+2022-04-09 04:58:10,228 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Gypsy                         1              1              1              0
+pararetrovirus  unknown                       1              0              0              0
+LINE            unknown                       7              0              0              0
+TIR             MuDR_Mutator                  2              0              0              0
+TIR             hAT                           1              0              0              0
+2022-04-09 04:58:10,228 -INFO- Pipeline done.
+2022-04-09 04:58:10,228 -INFO- cleaning the temporary directory ./tmp
+2022-04-09 05:15:13,781 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-09 05:15:13,783 -INFO- VARS: {'sequence': 'OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa.code', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa.code.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-09 05:15:13,784 -INFO- checking dependencies:
+2022-04-09 05:15:13,794 -INFO- hmmer	3.3.2	OK
+2022-04-09 05:15:13,857 -INFO- blastn	2.10.0+	OK
+2022-04-09 05:15:13,858 -INFO- check database rexdb
+2022-04-09 05:15:13,858 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-09 05:15:13,858 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-09 05:15:13,859 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-09 05:15:13,859 -INFO- Start classifying pipeline
+2022-04-09 05:15:14,176 -INFO- total 35594 sequences
+2022-04-09 05:15:14,176 -INFO- translating `OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa.code` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-09 05:15:51,965 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-09 05:15:53,597 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-09 05:15:53,597 -INFO- Running on Python 3.6.13 linux
+2022-04-09 05:15:54,921 -INFO- pp local server started with 20 workers
+2022-04-09 05:15:54,958 -INFO- Task 0 started
+2022-04-09 05:15:54,960 -INFO- Task 1 started
+2022-04-09 05:15:54,960 -INFO- Task 2 started
+2022-04-09 05:15:54,961 -INFO- Task 3 started
+2022-04-09 05:15:54,961 -INFO- Task 4 started
+2022-04-09 05:15:54,962 -INFO- Task 5 started
+2022-04-09 05:15:54,963 -INFO- Task 6 started
+2022-04-09 05:15:54,964 -INFO- Task 7 started
+2022-04-09 05:15:54,965 -INFO- Task 8 started
+2022-04-09 05:15:54,966 -INFO- Task 9 started
+2022-04-09 05:15:54,966 -INFO- Task 10 started
+2022-04-09 05:15:54,967 -INFO- Task 11 started
+2022-04-09 05:15:54,968 -INFO- Task 12 started
+2022-04-09 05:15:54,968 -INFO- Task 13 started
+2022-04-09 05:15:54,969 -INFO- Task 14 started
+2022-04-09 05:15:54,969 -INFO- Task 15 started
+2022-04-09 05:15:54,970 -INFO- Task 16 started
+2022-04-09 05:15:54,971 -INFO- Task 17 started
+2022-04-09 05:15:54,971 -INFO- Task 18 started
+2022-04-09 05:15:54,972 -INFO- Task 19 started
+2022-04-09 05:18:58,960 -INFO- generating gene anntations
+2022-04-09 05:19:02,236 -INFO- 378 sequences classified by HMM
+2022-04-09 05:19:02,237 -INFO- see protein domain sequences in `OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa.code.rexdb.dom.faa` and annotation gff3 file in `OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa.code.rexdb.dom.gff3`
+2022-04-09 05:19:02,237 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-09 05:19:03,289 -INFO- using the 80-80-80 rule
+2022-04-09 05:19:03,289 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-09 05:19:03,657 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-09 05:19:12,290 -INFO- 40 sequences classified in pass 2
+2022-04-09 05:19:12,291 -INFO- total 418 sequences classified.
+2022-04-09 05:19:12,291 -INFO- see classified sequences in `OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.tsv`
+2022-04-09 05:19:12,291 -INFO- writing library for RepeatMasker in `OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.lib`
+2022-04-09 05:19:13,071 -INFO- writing classified protein domains in `OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.pep`
+2022-04-09 05:19:13,083 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Bel-Pao                       1              0              0              0
+LTR             Copia                        45             38             13              0
+LTR             Gypsy                        93             82             16              0
+LTR             Retrovirus                    3              0              0              0
+pararetrovirus  unknown                      18              0              0              0
+DIRS            unknown                       1              0              0              0
+Penelope        unknown                       1              0              0              0
+LINE            unknown                      40              0              0              0
+TIR             EnSpm_CACTA                  10              0              0              0
+TIR             MuDR_Mutator                 85              0              0              0
+TIR             PIF_Harbinger                 1              0              0              0
+TIR             Sola2                         1              0              0              0
+TIR             hAT                          14              0              0              0
+Maverick        unknown                     102              0              0              0
+mixture         mixture                       3              0              0              0
+2022-04-09 05:19:13,083 -INFO- Pipeline done.
+2022-04-09 05:19:13,083 -INFO- cleaning the temporary directory ./tmp
+pararetrovirus/NA not found in the TE_SO database, it will not be used to rename sequences in the final annotation.
+pararetrovirus/NA not found in the TE_SO database, it will not be used to rename sequences in the final annotation.
+Sat Apr  9 06:22:00 PDT 2022	Homology-based annotation of TEs using OsativaKitaake_499_v3.0.fa.mod.EDTA.TElib.fa from scratch.
+
+	Command being timed: "shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/OsativaKitaake/assembly/OsativaKitaake_499_v3.0.fa --cds /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/OsativaKitaake/annotation/OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 20"
+	User time (seconds): 4609298.18
+	System time (seconds): 349774.46
+	Percent of CPU this job got: 2090%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 65:53:01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5156240
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1767
+	Minor (reclaiming a frame) page faults: 35530692229
+	Voluntary context switches: 615534393
+	Involuntary context switches: 28925562
+	Swaps: 0
+	File system inputs: 444476
+	File system outputs: 189680
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

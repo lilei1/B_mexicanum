@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --image=docker:oushujun/edta:2.0.0
+#SBATCH --qos=jgi_exvivo
+#SBATCH --time=96:00:00
+#SBATCH --nodes=1
+#SBATCH --account=plant
+#SBATCH --job-name=EDTA_Barb
+#SBATCH --output=EDTA_Barb-%l.out
+#SBATCH --error=EDTA_Barb-%l.err
+
+cd /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/TE_anno/Barb
+
+/usr/bin/time -v shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/BarbusculaBARB1.v3.1.prelim.annot/Brachypodium_arbuscula_var_BARB1.mainGenome.fasta --cds /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/BarbusculaBARB1.v3.1.prelim.annot/BarbusculaBARB1v3.1.primaryTrs.cds.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 20

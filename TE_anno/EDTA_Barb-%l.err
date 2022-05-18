@@ -1,0 +1,180 @@
+Sun Apr  3 09:10:00 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Sun Apr  3 09:10:02 PDT 2022	Start to find LTR candidates.
+
+Sun Apr  3 09:10:02 PDT 2022	Existing result file Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.LTR.raw.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+Sun Apr  3 09:10:03 PDT 2022	Finish finding LTR candidates.
+
+Sun Apr  3 09:10:03 PDT 2022	Start to find TIR candidates.
+
+Sun Apr  3 09:10:03 PDT 2022	Identify TIR candidates from scratch.
+
+Species: others
+Sun Apr  3 09:32:14 PDT 2022	Finish finding TIR candidates.
+
+Sun Apr  3 09:32:14 PDT 2022	Start to find Helitron candidates.
+
+Sun Apr  3 09:32:14 PDT 2022	Identify Helitron candidates from scratch.
+
+Sun Apr  3 11:20:23 PDT 2022	Finish finding Helitron candidates.
+
+Sun Apr  3 11:20:23 PDT 2022	Execution of EDTA_raw.pl is finished!
+
+2022-04-03 16:04:45,012 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-03 16:04:45,024 -INFO- VARS: {'sequence': 'Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-03 16:04:45,025 -INFO- checking dependencies:
+2022-04-03 16:04:45,232 -INFO- hmmer	3.3.2	OK
+2022-04-03 16:04:45,306 -INFO- blastn	2.10.0+	OK
+2022-04-03 16:04:45,307 -INFO- check database rexdb
+2022-04-03 16:04:45,307 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-03 16:04:45,307 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-03 16:04:45,307 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-03 16:04:45,307 -INFO- Start classifying pipeline
+2022-04-03 16:04:45,327 -INFO- total 255 sequences
+2022-04-03 16:04:45,327 -INFO- translating `Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.RM.consensi.fa` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-03 16:04:45,688 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-03 16:04:45,724 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-03 16:04:45,724 -INFO- Running on Python 3.6.13 linux
+2022-04-03 16:04:47,014 -INFO- pp local server started with 20 workers
+2022-04-03 16:04:47,172 -INFO- Task 0 started
+2022-04-03 16:04:47,174 -INFO- Task 1 started
+2022-04-03 16:04:47,175 -INFO- Task 2 started
+2022-04-03 16:04:47,176 -INFO- Task 3 started
+2022-04-03 16:04:47,176 -INFO- Task 4 started
+2022-04-03 16:04:47,177 -INFO- Task 5 started
+2022-04-03 16:04:47,177 -INFO- Task 6 started
+2022-04-03 16:04:47,178 -INFO- Task 7 started
+2022-04-03 16:04:47,178 -INFO- Task 8 started
+2022-04-03 16:04:47,179 -INFO- Task 9 started
+2022-04-03 16:04:47,180 -INFO- Task 10 started
+2022-04-03 16:04:47,180 -INFO- Task 11 started
+2022-04-03 16:04:47,181 -INFO- Task 12 started
+2022-04-03 16:04:47,182 -INFO- Task 13 started
+2022-04-03 16:04:47,182 -INFO- Task 14 started
+2022-04-03 16:04:47,183 -INFO- Task 15 started
+2022-04-03 16:04:47,183 -INFO- Task 16 started
+2022-04-03 16:04:47,184 -INFO- Task 17 started
+2022-04-03 16:04:47,185 -INFO- Task 18 started
+2022-04-03 16:04:47,185 -INFO- Task 19 started
+2022-04-03 16:04:49,166 -INFO- generating gene anntations
+2022-04-03 16:04:49,217 -INFO- 19 sequences classified by HMM
+2022-04-03 16:04:49,218 -INFO- see protein domain sequences in `Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.dom.gff3`
+2022-04-03 16:04:49,218 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-03 16:04:49,233 -INFO- using the 80-80-80 rule
+2022-04-03 16:04:49,323 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-03 16:04:49,577 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-03 16:04:49,783 -INFO- 1 sequences classified in pass 2
+2022-04-03 16:04:49,783 -INFO- total 20 sequences classified.
+2022-04-03 16:04:49,783 -INFO- see classified sequences in `Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.cls.tsv`
+2022-04-03 16:04:49,783 -INFO- writing library for RepeatMasker in `Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.cls.lib`
+2022-04-03 16:04:49,802 -INFO- writing classified protein domains in `Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.cls.pep`
+2022-04-03 16:04:49,804 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Gypsy                         2              2              2              0
+LINE            unknown                      12              0              0              0
+TIR             EnSpm_CACTA                   1              0              0              0
+TIR             MuDR_Mutator                  5              0              0              0
+2022-04-03 16:04:49,804 -INFO- Pipeline done.
+2022-04-03 16:04:49,804 -INFO- cleaning the temporary directory ./tmp
+2022-04-03 16:19:43,202 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-03 16:19:43,205 -INFO- VARS: {'sequence': 'BarbusculaBARB1v3.1.primaryTrs.cds.fa.code', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'BarbusculaBARB1v3.1.primaryTrs.cds.fa.code.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-03 16:19:43,205 -INFO- checking dependencies:
+2022-04-03 16:19:43,215 -INFO- hmmer	3.3.2	OK
+2022-04-03 16:19:43,282 -INFO- blastn	2.10.0+	OK
+2022-04-03 16:19:43,283 -INFO- check database rexdb
+2022-04-03 16:19:43,283 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-03 16:19:43,283 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-03 16:19:43,284 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-03 16:19:43,284 -INFO- Start classifying pipeline
+2022-04-03 16:19:43,589 -INFO- total 33605 sequences
+2022-04-03 16:19:43,589 -INFO- translating `BarbusculaBARB1v3.1.primaryTrs.cds.fa.code` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-03 16:20:22,578 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-03 16:20:24,057 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-03 16:20:24,058 -INFO- Running on Python 3.6.13 linux
+2022-04-03 16:20:25,393 -INFO- pp local server started with 20 workers
+2022-04-03 16:20:25,426 -INFO- Task 0 started
+2022-04-03 16:20:25,428 -INFO- Task 1 started
+2022-04-03 16:20:25,428 -INFO- Task 2 started
+2022-04-03 16:20:25,429 -INFO- Task 3 started
+2022-04-03 16:20:25,430 -INFO- Task 4 started
+2022-04-03 16:20:25,430 -INFO- Task 5 started
+2022-04-03 16:20:25,431 -INFO- Task 6 started
+2022-04-03 16:20:25,432 -INFO- Task 7 started
+2022-04-03 16:20:25,432 -INFO- Task 8 started
+2022-04-03 16:20:25,432 -INFO- Task 9 started
+2022-04-03 16:20:25,433 -INFO- Task 10 started
+2022-04-03 16:20:25,433 -INFO- Task 11 started
+2022-04-03 16:20:25,434 -INFO- Task 12 started
+2022-04-03 16:20:25,434 -INFO- Task 13 started
+2022-04-03 16:20:25,435 -INFO- Task 14 started
+2022-04-03 16:20:25,436 -INFO- Task 15 started
+2022-04-03 16:20:25,437 -INFO- Task 16 started
+2022-04-03 16:20:25,437 -INFO- Task 17 started
+2022-04-03 16:20:25,438 -INFO- Task 18 started
+2022-04-03 16:20:25,438 -INFO- Task 19 started
+2022-04-03 16:23:20,085 -INFO- generating gene anntations
+2022-04-03 16:23:22,915 -INFO- 757 sequences classified by HMM
+2022-04-03 16:23:22,915 -INFO- see protein domain sequences in `BarbusculaBARB1v3.1.primaryTrs.cds.fa.code.rexdb.dom.faa` and annotation gff3 file in `BarbusculaBARB1v3.1.primaryTrs.cds.fa.code.rexdb.dom.gff3`
+2022-04-03 16:23:22,915 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-03 16:23:23,951 -INFO- using the 80-80-80 rule
+2022-04-03 16:23:23,951 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-03 16:23:24,260 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-03 16:23:32,308 -INFO- 91 sequences classified in pass 2
+2022-04-03 16:23:32,308 -INFO- total 848 sequences classified.
+2022-04-03 16:23:32,308 -INFO- see classified sequences in `BarbusculaBARB1v3.1.primaryTrs.cds.fa.code.rexdb.cls.tsv`
+2022-04-03 16:23:32,308 -INFO- writing library for RepeatMasker in `BarbusculaBARB1v3.1.primaryTrs.cds.fa.code.rexdb.cls.lib`
+2022-04-03 16:23:33,059 -INFO- writing classified protein domains in `BarbusculaBARB1v3.1.primaryTrs.cds.fa.code.rexdb.cls.pep`
+2022-04-03 16:23:33,077 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Bel-Pao                       2              0              0              0
+LTR             Copia                       148            132             14              0
+LTR             Gypsy                       189            167             13              0
+LTR             Retrovirus                    2              0              0              0
+LTR             mixture                       1              0              0              0
+pararetrovirus  unknown                      29              0              0              0
+DIRS            unknown                       1              0              0              0
+LINE            unknown                     176              0              0              0
+TIR             Kolobok                       2              0              0              0
+TIR             MuDR_Mutator                 54              0              0              0
+TIR             P                             1              0              0              0
+TIR             PIF_Harbinger                13              0              0              0
+TIR             Sola1                         1              0              0              0
+TIR             Tc1_Mariner                   5              0              0              0
+TIR             hAT                          82              0              0              0
+Helitron        unknown                      29              0              0              0
+Maverick        unknown                     110              0              0              0
+mixture         mixture                       3              0              0              0
+2022-04-03 16:23:33,078 -INFO- Pipeline done.
+2022-04-03 16:23:33,078 -INFO- cleaning the temporary directory ./tmp
+Sun Apr  3 16:59:26 PDT 2022	Homology-based annotation of TEs using Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.TElib.fa from scratch.
+
+	Command being timed: "shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/BarbusculaBARB1.v3.1.prelim.annot/Brachypodium_arbuscula_var_BARB1.mainGenome.fasta --cds /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/BarbusculaBARB1.v3.1.prelim.annot/BarbusculaBARB1v3.1.primaryTrs.cds.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 20"
+	User time (seconds): 1753413.82
+	System time (seconds): 124565.14
+	Percent of CPU this job got: 2160%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 24:08:25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2877124
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1347
+	Minor (reclaiming a frame) page faults: 14333447396
+	Voluntary context switches: 193052324
+	Involuntary context switches: 14361817
+	Swaps: 0
+	File system inputs: 404178
+	File system outputs: 104104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

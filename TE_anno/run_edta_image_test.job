@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --image=docker:oushujun/edta:2.0.0
+#SBATCH --qos=jgi_exvivo
+#SBATCH --time=24:00:00
+#SBATCH --nodes=1
+#SBATCH --account=plant
+#SBATCH --job-name=EDTA_Bmex
+#SBATCH --output=EDTA_test-%l.out
+#SBATCH --error=EDTA_test-%l.err
+
+cd /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/TE_anno/test
+
+shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/bscratch/llei2019/software/EDTA/test/genome.fa --cds /global/u2/l/llei2019/plantbox/bscratch/llei2019/software/EDTA/test/genome.cds.fa --overwrite 1 --sensitive 1 --anno 1 --evaluate 1 --threads 30
+

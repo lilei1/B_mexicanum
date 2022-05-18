@@ -1,0 +1,48 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Wed Apr  6 15:24:19 PDT 2022	Dependency checking:
+				All passed!
+
+	A CDS file /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/PhalliiHAL_v2.2/annotation/PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Wed Apr  6 15:24:28 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Wed Apr  6 21:12:07 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					PhalliiHAL_591_v2.0.fa.mod.EDTA.intact.fa
+					PhalliiHAL_591_v2.0.fa.mod.EDTA.intact.gff3
+
+Wed Apr  6 21:12:07 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+
+Wed Apr  6 21:33:24 PDT 2022	EDTA advance filtering finished.
+
+Wed Apr  6 21:33:24 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+
+				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
+
+Thu Apr  7 05:44:17 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
+
+				Remove CDS-related sequences in the EDTA library:
+
+Thu Apr  7 06:09:22 PDT 2022	EDTA final stage finished! You may check out:
+				The final EDTA TE library: PhalliiHAL_591_v2.0.fa.mod.EDTA.TElib.fa
+Thu Apr  7 06:09:22 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
+
+Thu Apr  7 06:59:50 PDT 2022	TE annotation using the EDTA library has finished! Check out:
+				Whole-genome TE annotation (total TE: 59.82%): PhalliiHAL_591_v2.0.fa.mod.EDTA.TEanno.gff3
+				Whole-genome TE annotation summary: PhalliiHAL_591_v2.0.fa.mod.EDTA.TEanno.sum
+				Low-threshold TE masking for MAKER gene annotation (masked: 44.13%): PhalliiHAL_591_v2.0.fa.mod.MAKER.masked
+
+Thu Apr  7 06:59:51 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
+
+Sat Apr  9 04:41:34 PDT 2022	Evaluation of TE annotation finished! Check out these files:
+
+				Overall: PhalliiHAL_591_v2.0.fa.mod.EDTA.TE.fa.stat.all.sum
+				Nested: PhalliiHAL_591_v2.0.fa.mod.EDTA.TE.fa.stat.nested.sum
+				Non-nested: PhalliiHAL_591_v2.0.fa.mod.EDTA.TE.fa.stat.redun.sum
+

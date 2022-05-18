@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --image=docker:oushujun/edta:2.0.0
+#SBATCH --qos=jgi_exvivo
+#SBATCH --time=168:00:00
+#SBATCH --nodes=1
+#SBATCH --account=plant
+#SBATCH --job-name=EDTA_Bmex
+#SBATCH --output=EDTA_Bmex-%l.out
+#SBATCH --error=EDTA_Bmex-%l.err
+
+cd /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/TE_anno/Bmax
+
+/usr/bin/time -v shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bmexicanum/assembly/Bmexicanum_577_v1.0.fa --cds /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bmexicanum/annotation/Bmexicanum_577_v1.1.cds_primaryTranscriptOnly.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 20
+

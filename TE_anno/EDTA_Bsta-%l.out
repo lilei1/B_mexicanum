@@ -1,0 +1,48 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Mon Apr  4 11:41:10 PDT 2022	Dependency checking:
+				All passed!
+
+	A CDS file /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bstacei/annotation/Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Mon Apr  4 11:41:16 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Mon Apr  4 14:00:52 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					Bstacei_316_v1.0.fa.mod.EDTA.intact.fa
+					Bstacei_316_v1.0.fa.mod.EDTA.intact.gff3
+
+Mon Apr  4 14:00:52 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+
+Mon Apr  4 14:39:15 PDT 2022	EDTA advance filtering finished.
+
+Mon Apr  4 14:39:15 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+
+				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
+
+Mon Apr  4 17:53:13 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
+
+				Remove CDS-related sequences in the EDTA library:
+
+Mon Apr  4 18:11:55 PDT 2022	EDTA final stage finished! You may check out:
+				The final EDTA TE library: Bstacei_316_v1.0.fa.mod.EDTA.TElib.fa
+Mon Apr  4 18:11:55 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
+
+Mon Apr  4 18:35:55 PDT 2022	TE annotation using the EDTA library has finished! Check out:
+				Whole-genome TE annotation (total TE: 31.25%): Bstacei_316_v1.0.fa.mod.EDTA.TEanno.gff3
+				Whole-genome TE annotation summary: Bstacei_316_v1.0.fa.mod.EDTA.TEanno.sum
+				Low-threshold TE masking for MAKER gene annotation (masked: 12.37%): Bstacei_316_v1.0.fa.mod.MAKER.masked
+
+Mon Apr  4 18:35:55 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
+
+Tue Apr  5 04:43:05 PDT 2022	Evaluation of TE annotation finished! Check out these files:
+
+				Overall: Bstacei_316_v1.0.fa.mod.EDTA.TE.fa.stat.all.sum
+				Nested: Bstacei_316_v1.0.fa.mod.EDTA.TE.fa.stat.nested.sum
+				Non-nested: Bstacei_316_v1.0.fa.mod.EDTA.TE.fa.stat.redun.sum
+

@@ -1,0 +1,179 @@
+Wed Apr  6 15:24:28 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Wed Apr  6 15:24:31 PDT 2022	Start to find LTR candidates.
+
+Wed Apr  6 15:24:31 PDT 2022	Identify LTR retrotransposon candidates from scratch.
+
+Wed Apr  6 16:31:25 PDT 2022	Finish finding LTR candidates.
+
+Wed Apr  6 16:31:25 PDT 2022	Start to find TIR candidates.
+
+Wed Apr  6 16:31:25 PDT 2022	Identify TIR candidates from scratch.
+
+Species: others
+Wed Apr  6 17:59:53 PDT 2022	Finish finding TIR candidates.
+
+Wed Apr  6 17:59:53 PDT 2022	Start to find Helitron candidates.
+
+Wed Apr  6 17:59:53 PDT 2022	Identify Helitron candidates from scratch.
+
+Wed Apr  6 21:12:06 PDT 2022	Finish finding Helitron candidates.
+
+Wed Apr  6 21:12:07 PDT 2022	Execution of EDTA_raw.pl is finished!
+
+2022-04-07 05:33:42,585 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-07 05:33:42,614 -INFO- VARS: {'sequence': 'PhalliiHAL_591_v2.0.fa.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'PhalliiHAL_591_v2.0.fa.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-07 05:33:42,614 -INFO- checking dependencies:
+2022-04-07 05:33:42,772 -INFO- hmmer	3.3.2	OK
+2022-04-07 05:33:42,848 -INFO- blastn	2.10.0+	OK
+2022-04-07 05:33:42,850 -INFO- check database rexdb
+2022-04-07 05:33:42,850 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-07 05:33:42,850 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-07 05:33:42,850 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-07 05:33:42,850 -INFO- Start classifying pipeline
+2022-04-07 05:33:42,877 -INFO- total 682 sequences
+2022-04-07 05:33:42,877 -INFO- translating `PhalliiHAL_591_v2.0.fa.mod.RM.consensi.fa` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-07 05:33:43,553 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-07 05:33:43,599 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-07 05:33:43,599 -INFO- Running on Python 3.6.13 linux
+2022-04-07 05:33:44,854 -INFO- pp local server started with 20 workers
+2022-04-07 05:33:44,998 -INFO- Task 0 started
+2022-04-07 05:33:45,000 -INFO- Task 1 started
+2022-04-07 05:33:45,000 -INFO- Task 2 started
+2022-04-07 05:33:45,001 -INFO- Task 3 started
+2022-04-07 05:33:45,001 -INFO- Task 4 started
+2022-04-07 05:33:45,002 -INFO- Task 5 started
+2022-04-07 05:33:45,002 -INFO- Task 6 started
+2022-04-07 05:33:45,002 -INFO- Task 7 started
+2022-04-07 05:33:45,003 -INFO- Task 8 started
+2022-04-07 05:33:45,003 -INFO- Task 9 started
+2022-04-07 05:33:45,004 -INFO- Task 10 started
+2022-04-07 05:33:45,005 -INFO- Task 11 started
+2022-04-07 05:33:45,006 -INFO- Task 12 started
+2022-04-07 05:33:45,007 -INFO- Task 13 started
+2022-04-07 05:33:45,008 -INFO- Task 14 started
+2022-04-07 05:33:45,009 -INFO- Task 15 started
+2022-04-07 05:33:45,010 -INFO- Task 16 started
+2022-04-07 05:33:45,011 -INFO- Task 17 started
+2022-04-07 05:33:45,012 -INFO- Task 18 started
+2022-04-07 05:33:45,012 -INFO- Task 19 started
+2022-04-07 05:33:49,270 -INFO- generating gene anntations
+2022-04-07 05:33:49,343 -INFO- 39 sequences classified by HMM
+2022-04-07 05:33:49,343 -INFO- see protein domain sequences in `PhalliiHAL_591_v2.0.fa.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `PhalliiHAL_591_v2.0.fa.mod.RM.consensi.fa.rexdb.dom.gff3`
+2022-04-07 05:33:49,347 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-07 05:33:49,368 -INFO- using the 80-80-80 rule
+2022-04-07 05:33:49,368 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-07 05:33:49,680 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-07 05:33:49,957 -INFO- 6 sequences classified in pass 2
+2022-04-07 05:33:49,958 -INFO- total 45 sequences classified.
+2022-04-07 05:33:49,958 -INFO- see classified sequences in `PhalliiHAL_591_v2.0.fa.mod.RM.consensi.fa.rexdb.cls.tsv`
+2022-04-07 05:33:49,958 -INFO- writing library for RepeatMasker in `PhalliiHAL_591_v2.0.fa.mod.RM.consensi.fa.rexdb.cls.lib`
+2022-04-07 05:33:49,991 -INFO- writing classified protein domains in `PhalliiHAL_591_v2.0.fa.mod.RM.consensi.fa.rexdb.cls.pep`
+2022-04-07 05:33:49,993 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Copia                         1              1              1              0
+LTR             Gypsy                        28             22              4              0
+pararetrovirus  unknown                       1              0              0              0
+LINE            unknown                      10              0              0              0
+TIR             EnSpm_CACTA                   1              0              0              0
+TIR             MuDR_Mutator                  1              0              0              0
+TIR             PIF_Harbinger                 1              0              0              0
+TIR             hAT                           2              0              0              0
+2022-04-07 05:33:49,993 -INFO- Pipeline done.
+2022-04-07 05:33:49,993 -INFO- cleaning the temporary directory ./tmp
+2022-04-07 05:44:17,973 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-07 05:44:17,976 -INFO- VARS: {'sequence': 'PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa.code', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa.code.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-07 05:44:17,976 -INFO- checking dependencies:
+2022-04-07 05:44:17,988 -INFO- hmmer	3.3.2	OK
+2022-04-07 05:44:18,055 -INFO- blastn	2.10.0+	OK
+2022-04-07 05:44:18,056 -INFO- check database rexdb
+2022-04-07 05:44:18,056 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-07 05:44:18,056 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-07 05:44:18,057 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-07 05:44:18,057 -INFO- Start classifying pipeline
+2022-04-07 05:44:18,376 -INFO- total 34921 sequences
+2022-04-07 05:44:18,376 -INFO- translating `PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa.code` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-07 05:44:54,650 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-07 05:44:56,204 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-07 05:44:56,205 -INFO- Running on Python 3.6.13 linux
+2022-04-07 05:44:57,506 -INFO- pp local server started with 20 workers
+2022-04-07 05:44:57,540 -INFO- Task 0 started
+2022-04-07 05:44:57,541 -INFO- Task 1 started
+2022-04-07 05:44:57,542 -INFO- Task 2 started
+2022-04-07 05:44:57,542 -INFO- Task 3 started
+2022-04-07 05:44:57,543 -INFO- Task 4 started
+2022-04-07 05:44:57,544 -INFO- Task 5 started
+2022-04-07 05:44:57,544 -INFO- Task 6 started
+2022-04-07 05:44:57,545 -INFO- Task 7 started
+2022-04-07 05:44:57,546 -INFO- Task 8 started
+2022-04-07 05:44:57,547 -INFO- Task 9 started
+2022-04-07 05:44:57,547 -INFO- Task 10 started
+2022-04-07 05:44:57,548 -INFO- Task 11 started
+2022-04-07 05:44:57,549 -INFO- Task 12 started
+2022-04-07 05:44:57,550 -INFO- Task 13 started
+2022-04-07 05:44:57,551 -INFO- Task 14 started
+2022-04-07 05:44:57,552 -INFO- Task 15 started
+2022-04-07 05:44:57,553 -INFO- Task 16 started
+2022-04-07 05:44:57,554 -INFO- Task 17 started
+2022-04-07 05:44:57,555 -INFO- Task 18 started
+2022-04-07 05:44:57,556 -INFO- Task 19 started
+2022-04-07 05:47:33,871 -INFO- generating gene anntations
+2022-04-07 05:47:36,739 -INFO- 830 sequences classified by HMM
+2022-04-07 05:47:36,740 -INFO- see protein domain sequences in `PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa.code.rexdb.dom.faa` and annotation gff3 file in `PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa.code.rexdb.dom.gff3`
+2022-04-07 05:47:36,740 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-07 05:47:37,870 -INFO- using the 80-80-80 rule
+2022-04-07 05:47:37,870 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-07 05:47:38,170 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-07 05:47:46,355 -INFO- 113 sequences classified in pass 2
+2022-04-07 05:47:46,356 -INFO- total 943 sequences classified.
+2022-04-07 05:47:46,356 -INFO- see classified sequences in `PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa.code.rexdb.cls.tsv`
+2022-04-07 05:47:46,356 -INFO- writing library for RepeatMasker in `PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa.code.rexdb.cls.lib`
+2022-04-07 05:47:47,113 -INFO- writing classified protein domains in `PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa.code.rexdb.cls.pep`
+2022-04-07 05:47:47,133 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Bel-Pao                       4              0              0              0
+LTR             Copia                       291            268             12              0
+LTR             Gypsy                       211            203             12              0
+LTR             Retrovirus                    1              0              0              0
+pararetrovirus  unknown                       1              0              0              0
+Penelope        unknown                       1              0              0              0
+LINE            unknown                     114              0              0              0
+TIR             EnSpm_CACTA                   2              0              0              0
+TIR             MuDR_Mutator                 59              0              0              0
+TIR             PIF_Harbinger                11              0              0              0
+TIR             Tc1_Mariner                   5              0              0              0
+TIR             hAT                          99              0              0              0
+Helitron        unknown                      30              0              0              0
+Maverick        unknown                     111              0              0              0
+mixture         mixture                       3              0              0              0
+2022-04-07 05:47:47,134 -INFO- Pipeline done.
+2022-04-07 05:47:47,134 -INFO- cleaning the temporary directory ./tmp
+Thu Apr  7 06:09:22 PDT 2022	Homology-based annotation of TEs using PhalliiHAL_591_v2.0.fa.mod.EDTA.TElib.fa from scratch.
+
+	Command being timed: "shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/PhalliiHAL_v2.2/assembly/PhalliiHAL_591_v2.0.fa --cds /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/PhalliiHAL_v2.2/annotation/PhalliiHAL_591_v2.2.cds_primaryTranscriptOnly.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 20"
+	User time (seconds): 3886190.42
+	System time (seconds): 371508.49
+	Percent of CPU this job got: 1929%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 61:17:16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4473384
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1710
+	Minor (reclaiming a frame) page faults: 31290316754
+	Voluntary context switches: 3322751151
+	Involuntary context switches: 27328994
+	Swaps: 0
+	File system inputs: 447320
+	File system outputs: 137680
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

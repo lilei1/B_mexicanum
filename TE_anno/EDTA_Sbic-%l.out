@@ -1,0 +1,42 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Sun May  1 17:46:19 PDT 2022	Dependency checking:
+				All passed!
+
+	A CDS file /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Sbicolor/annotation/Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Sun May  1 17:46:30 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Sun May  1 17:46:35 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					Sbicolor_454_v3.0.1.fa.mod.EDTA.intact.fa
+					Sbicolor_454_v3.0.1.fa.mod.EDTA.intact.gff3
+
+Sun May  1 17:46:35 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+
+Sun May  1 19:03:03 PDT 2022	EDTA advance filtering finished.
+
+Sun May  1 19:03:03 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+
+				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
+
+Sun May  1 21:04:32 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
+
+				Remove CDS-related sequences in the EDTA library:
+
+Sun May  1 21:43:46 PDT 2022	EDTA final stage finished! You may check out:
+				The final EDTA TE library: Sbicolor_454_v3.0.1.fa.mod.EDTA.TElib.fa
+Sun May  1 21:43:46 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
+
+Sun May  1 23:44:32 PDT 2022	TE annotation using the EDTA library has finished! Check out:
+				Whole-genome TE annotation (total TE: 69.31%): Sbicolor_454_v3.0.1.fa.mod.EDTA.TEanno.gff3
+				Whole-genome TE annotation summary: Sbicolor_454_v3.0.1.fa.mod.EDTA.TEanno.sum
+				Low-threshold TE masking for MAKER gene annotation (masked: 48.56%): Sbicolor_454_v3.0.1.fa.mod.MAKER.masked
+
+Sun May  1 23:44:33 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
+

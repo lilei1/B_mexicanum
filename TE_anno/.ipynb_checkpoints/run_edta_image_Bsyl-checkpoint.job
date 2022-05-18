@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --image=docker:oushujun/edta:2.0.0
+#SBATCH --qos=jgi_exvivo
+#SBATCH --time=96:00:00
+#SBATCH --nodes=1
+#SBATCH --account=plant
+#SBATCH --job-name=EDTA_Bsyl
+#SBATCH --output=EDTA_Bsyl-%l.out
+#SBATCH --error=EDTA_Bsyl-%l.err
+
+cd /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/TE_anno/Bsyl
+
+/usr/bin/time -v shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Bsylvaticum.v2.1.prelim.annot/Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta --cds /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Bsylvaticum.v2.1.prelim.annot/Bsylvaticumv2.1.primaryTrs.cds.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 30

@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --image=docker:oushujun/edta:2.0.0
+#SBATCH --qos=jgi_exvivo
+#SBATCH --time=96:00:00
+#SBATCH --nodes=1
+#SBATCH --account=plant
+#SBATCH --job-name=EDTA_Osat
+#SBATCH --output=EDTA_Osat-%l.out
+#SBATCH --error=EDTA_Osat-%l.err
+
+cd /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/TE_anno/Osat
+
+/usr/bin/time -v shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/OsativaKitaake/assembly/OsativaKitaake_499_v3.0.fa --cds  /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/OsativaKitaake/annotation/OsativaKitaake_499_v3.1.cds_primaryTranscriptOnly.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 20

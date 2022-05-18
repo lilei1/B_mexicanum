@@ -1,0 +1,23 @@
+Wed Mar 30 09:22:40 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Wed Mar 30 09:22:42 PDT 2022	Start to find LTR candidates.
+
+Wed Mar 30 09:22:42 PDT 2022	Identify LTR retrotransposon candidates from scratch.
+
+Wed Mar 30 09:53:40 PDT 2022	Finish finding LTR candidates.
+
+Wed Mar 30 09:53:40 PDT 2022	Start to find TIR candidates.
+
+Wed Mar 30 09:53:40 PDT 2022	Identify TIR candidates from scratch.
+
+Species: others
+Wed Mar 30 10:14:58 PDT 2022	Finish finding TIR candidates.
+
+Wed Mar 30 10:14:58 PDT 2022	Start to find Helitron candidates.
+
+Wed Mar 30 10:14:58 PDT 2022	Identify Helitron candidates from scratch.
+
+Wed Mar 30 12:32:46 PDT 2022	Finish finding Helitron candidates.
+
+Wed Mar 30 12:32:47 PDT 2022	Execution of EDTA_raw.pl is finished!
+

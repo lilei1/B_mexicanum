@@ -1,0 +1,174 @@
+Mon Apr  4 11:41:16 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Mon Apr  4 11:41:18 PDT 2022	Start to find LTR candidates.
+
+Mon Apr  4 11:41:18 PDT 2022	Identify LTR retrotransposon candidates from scratch.
+
+Mon Apr  4 11:46:17 PDT 2022	Finish finding LTR candidates.
+
+Mon Apr  4 11:46:17 PDT 2022	Start to find TIR candidates.
+
+Mon Apr  4 11:46:17 PDT 2022	Identify TIR candidates from scratch.
+
+Species: others
+Mon Apr  4 12:28:33 PDT 2022	Finish finding TIR candidates.
+
+Mon Apr  4 12:28:33 PDT 2022	Start to find Helitron candidates.
+
+Mon Apr  4 12:28:33 PDT 2022	Identify Helitron candidates from scratch.
+
+Mon Apr  4 14:00:52 PDT 2022	Finish finding Helitron candidates.
+
+Mon Apr  4 14:00:52 PDT 2022	Execution of EDTA_raw.pl is finished!
+
+2022-04-04 17:43:12,642 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-04 17:43:12,681 -INFO- VARS: {'sequence': 'Bstacei_316_v1.0.fa.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Bstacei_316_v1.0.fa.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-04 17:43:12,681 -INFO- checking dependencies:
+2022-04-04 17:43:12,799 -INFO- hmmer	3.3.2	OK
+2022-04-04 17:43:12,875 -INFO- blastn	2.10.0+	OK
+2022-04-04 17:43:12,876 -INFO- check database rexdb
+2022-04-04 17:43:12,876 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-04 17:43:12,876 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-04 17:43:12,876 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-04 17:43:12,876 -INFO- Start classifying pipeline
+2022-04-04 17:43:12,914 -INFO- total 304 sequences
+2022-04-04 17:43:12,914 -INFO- translating `Bstacei_316_v1.0.fa.mod.RM.consensi.fa` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-04 17:43:13,175 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-04 17:43:13,198 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-04 17:43:13,198 -INFO- Running on Python 3.6.13 linux
+2022-04-04 17:43:14,476 -INFO- pp local server started with 20 workers
+2022-04-04 17:43:14,534 -INFO- Task 0 started
+2022-04-04 17:43:14,535 -INFO- Task 1 started
+2022-04-04 17:43:14,536 -INFO- Task 2 started
+2022-04-04 17:43:14,537 -INFO- Task 3 started
+2022-04-04 17:43:14,538 -INFO- Task 4 started
+2022-04-04 17:43:14,538 -INFO- Task 5 started
+2022-04-04 17:43:14,539 -INFO- Task 6 started
+2022-04-04 17:43:14,539 -INFO- Task 7 started
+2022-04-04 17:43:14,539 -INFO- Task 8 started
+2022-04-04 17:43:14,540 -INFO- Task 9 started
+2022-04-04 17:43:14,541 -INFO- Task 10 started
+2022-04-04 17:43:14,542 -INFO- Task 11 started
+2022-04-04 17:43:14,542 -INFO- Task 12 started
+2022-04-04 17:43:14,543 -INFO- Task 13 started
+2022-04-04 17:43:14,543 -INFO- Task 14 started
+2022-04-04 17:43:14,544 -INFO- Task 15 started
+2022-04-04 17:43:14,544 -INFO- Task 16 started
+2022-04-04 17:43:14,545 -INFO- Task 17 started
+2022-04-04 17:43:14,545 -INFO- Task 18 started
+2022-04-04 17:43:14,546 -INFO- Task 19 started
+2022-04-04 17:43:16,792 -INFO- generating gene anntations
+2022-04-04 17:43:16,845 -INFO- 34 sequences classified by HMM
+2022-04-04 17:43:16,845 -INFO- see protein domain sequences in `Bstacei_316_v1.0.fa.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `Bstacei_316_v1.0.fa.mod.RM.consensi.fa.rexdb.dom.gff3`
+2022-04-04 17:43:16,849 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-04 17:43:16,860 -INFO- using the 80-80-80 rule
+2022-04-04 17:43:16,860 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-04 17:43:17,057 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-04 17:43:17,238 -INFO- 1 sequences classified in pass 2
+2022-04-04 17:43:17,238 -INFO- total 35 sequences classified.
+2022-04-04 17:43:17,238 -INFO- see classified sequences in `Bstacei_316_v1.0.fa.mod.RM.consensi.fa.rexdb.cls.tsv`
+2022-04-04 17:43:17,239 -INFO- writing library for RepeatMasker in `Bstacei_316_v1.0.fa.mod.RM.consensi.fa.rexdb.cls.lib`
+2022-04-04 17:43:17,259 -INFO- writing classified protein domains in `Bstacei_316_v1.0.fa.mod.RM.consensi.fa.rexdb.cls.pep`
+2022-04-04 17:43:17,261 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Copia                         3              3              3              0
+LTR             Gypsy                         6              6              2              0
+LINE            unknown                      19              0              0              0
+TIR             EnSpm_CACTA                   1              0              0              0
+TIR             MuDR_Mutator                  4              0              0              0
+TIR             PIF_Harbinger                 2              0              0              0
+2022-04-04 17:43:17,262 -INFO- Pipeline done.
+2022-04-04 17:43:17,262 -INFO- cleaning the temporary directory ./tmp
+2022-04-04 17:53:14,750 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-04 17:53:14,753 -INFO- VARS: {'sequence': 'Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa.code', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa.code.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-04 17:53:14,753 -INFO- checking dependencies:
+2022-04-04 17:53:14,769 -INFO- hmmer	3.3.2	OK
+2022-04-04 17:53:14,839 -INFO- blastn	2.10.0+	OK
+2022-04-04 17:53:14,841 -INFO- check database rexdb
+2022-04-04 17:53:14,841 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-04 17:53:14,841 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-04 17:53:14,841 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-04 17:53:14,841 -INFO- Start classifying pipeline
+2022-04-04 17:53:15,122 -INFO- total 29898 sequences
+2022-04-04 17:53:15,122 -INFO- translating `Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa.code` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-04 17:53:48,123 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-04 17:53:49,450 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-04 17:53:49,450 -INFO- Running on Python 3.6.13 linux
+2022-04-04 17:53:50,888 -INFO- pp local server started with 20 workers
+2022-04-04 17:53:50,926 -INFO- Task 0 started
+2022-04-04 17:53:50,928 -INFO- Task 1 started
+2022-04-04 17:53:50,929 -INFO- Task 2 started
+2022-04-04 17:53:50,929 -INFO- Task 3 started
+2022-04-04 17:53:50,930 -INFO- Task 4 started
+2022-04-04 17:53:50,930 -INFO- Task 5 started
+2022-04-04 17:53:50,931 -INFO- Task 6 started
+2022-04-04 17:53:50,932 -INFO- Task 7 started
+2022-04-04 17:53:50,932 -INFO- Task 8 started
+2022-04-04 17:53:50,933 -INFO- Task 9 started
+2022-04-04 17:53:50,933 -INFO- Task 10 started
+2022-04-04 17:53:50,934 -INFO- Task 11 started
+2022-04-04 17:53:50,934 -INFO- Task 12 started
+2022-04-04 17:53:50,934 -INFO- Task 13 started
+2022-04-04 17:53:50,935 -INFO- Task 14 started
+2022-04-04 17:53:50,935 -INFO- Task 15 started
+2022-04-04 17:53:50,936 -INFO- Task 16 started
+2022-04-04 17:53:50,937 -INFO- Task 17 started
+2022-04-04 17:53:50,938 -INFO- Task 18 started
+2022-04-04 17:53:50,939 -INFO- Task 19 started
+2022-04-04 17:56:24,975 -INFO- generating gene anntations
+2022-04-04 17:56:27,588 -INFO- 486 sequences classified by HMM
+2022-04-04 17:56:27,588 -INFO- see protein domain sequences in `Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa.code.rexdb.dom.faa` and annotation gff3 file in `Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa.code.rexdb.dom.gff3`
+2022-04-04 17:56:27,588 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-04 17:56:28,469 -INFO- using the 80-80-80 rule
+2022-04-04 17:56:28,469 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-04 17:56:28,736 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-04 17:56:35,835 -INFO- 29 sequences classified in pass 2
+2022-04-04 17:56:35,835 -INFO- total 515 sequences classified.
+2022-04-04 17:56:35,836 -INFO- see classified sequences in `Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.tsv`
+2022-04-04 17:56:35,836 -INFO- writing library for RepeatMasker in `Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.lib`
+2022-04-04 17:56:36,566 -INFO- writing classified protein domains in `Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.pep`
+2022-04-04 17:56:36,578 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Bel-Pao                       2              0              0              0
+LTR             Copia                        49             34              9              0
+LTR             Gypsy                        73             67             15              0
+LTR             Retrovirus                    2              0              0              0
+LTR             mixture                       2              0              0              0
+LINE            unknown                     191              0              0              0
+TIR             Kolobok                       1              0              0              0
+TIR             MuDR_Mutator                 65              0              0              0
+TIR             PIF_Harbinger                16              0              0              0
+TIR             hAT                          20              0              0              0
+Helitron        unknown                       7              0              0              0
+Maverick        unknown                      87              0              0              0
+2022-04-04 17:56:36,578 -INFO- Pipeline done.
+2022-04-04 17:56:36,578 -INFO- cleaning the temporary directory ./tmp
+Mon Apr  4 18:11:55 PDT 2022	Homology-based annotation of TEs using Bstacei_316_v1.0.fa.mod.EDTA.TElib.fa from scratch.
+
+	Command being timed: "shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bstacei/assembly/Bstacei_316_v1.0.fa --cds /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bstacei/annotation/Bstacei_316_v1.1.cds_primaryTranscriptOnly.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 20"
+	User time (seconds): 1212402.31
+	System time (seconds): 86175.35
+	Percent of CPU this job got: 2117%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:01:55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2454816
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1454
+	Minor (reclaiming a frame) page faults: 10225694489
+	Voluntary context switches: 175189484
+	Involuntary context switches: 10996801
+	Swaps: 0
+	File system inputs: 551140
+	File system outputs: 90536
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

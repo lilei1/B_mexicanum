@@ -1,0 +1,48 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Wed Mar 30 17:00:54 PDT 2022	Dependency checking:
+				All passed!
+
+	A CDS file /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Bsylvaticum.v2.1.prelim.annot/Bsylvaticumv2.1.primaryTrs.cds.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Wed Mar 30 17:01:05 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Wed Mar 30 17:01:10 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.intact.fa
+					Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.intact.gff3
+
+Wed Mar 30 17:01:10 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+
+Wed Mar 30 17:58:32 PDT 2022	EDTA advance filtering finished.
+
+Wed Mar 30 17:58:32 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+
+				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
+
+Wed Mar 30 23:00:34 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
+
+				Remove CDS-related sequences in the EDTA library:
+
+Wed Mar 30 23:37:01 PDT 2022	EDTA final stage finished! You may check out:
+				The final EDTA TE library: Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.TElib.fa
+Wed Mar 30 23:37:01 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
+
+Thu Mar 31 00:16:39 PDT 2022	TE annotation using the EDTA library has finished! Check out:
+				Whole-genome TE annotation (total TE: 49.94%): Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.TEanno.gff3
+				Whole-genome TE annotation summary: Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.TEanno.sum
+				Low-threshold TE masking for MAKER gene annotation (masked: 30.49%): Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.MAKER.masked
+
+Thu Mar 31 00:16:39 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
+
+Fri Apr  1 01:37:19 PDT 2022	Evaluation of TE annotation finished! Check out these files:
+
+				Overall: Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.TE.fa.stat.all.sum
+				Nested: Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.TE.fa.stat.nested.sum
+				Non-nested: Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.TE.fa.stat.redun.sum
+

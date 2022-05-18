@@ -1,0 +1,176 @@
+Tue Apr  5 13:42:22 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Tue Apr  5 13:42:24 PDT 2022	Start to find LTR candidates.
+
+Tue Apr  5 13:42:24 PDT 2022	Identify LTR retrotransposon candidates from scratch.
+
+Tue Apr  5 13:53:05 PDT 2022	Finish finding LTR candidates.
+
+Tue Apr  5 13:53:05 PDT 2022	Start to find TIR candidates.
+
+Tue Apr  5 13:53:05 PDT 2022	Identify TIR candidates from scratch.
+
+Species: others
+Tue Apr  5 14:43:25 PDT 2022	Finish finding TIR candidates.
+
+Tue Apr  5 14:43:25 PDT 2022	Start to find Helitron candidates.
+
+Tue Apr  5 14:43:25 PDT 2022	Identify Helitron candidates from scratch.
+
+Tue Apr  5 16:30:03 PDT 2022	Finish finding Helitron candidates.
+
+Tue Apr  5 16:30:03 PDT 2022	Execution of EDTA_raw.pl is finished!
+
+2022-04-05 21:24:21,007 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-05 21:24:21,052 -INFO- VARS: {'sequence': 'Bdistachyon_556_v3.0.fa.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Bdistachyon_556_v3.0.fa.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-05 21:24:21,052 -INFO- checking dependencies:
+2022-04-05 21:24:21,252 -INFO- hmmer	3.3.2	OK
+2022-04-05 21:24:21,322 -INFO- blastn	2.10.0+	OK
+2022-04-05 21:24:21,323 -INFO- check database rexdb
+2022-04-05 21:24:21,323 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-05 21:24:21,323 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-05 21:24:21,323 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-05 21:24:21,323 -INFO- Start classifying pipeline
+2022-04-05 21:24:21,345 -INFO- total 337 sequences
+2022-04-05 21:24:21,345 -INFO- translating `Bdistachyon_556_v3.0.fa.mod.RM.consensi.fa` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-05 21:24:21,694 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-05 21:24:21,736 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-05 21:24:21,736 -INFO- Running on Python 3.6.13 linux
+2022-04-05 21:24:23,031 -INFO- pp local server started with 20 workers
+2022-04-05 21:24:23,168 -INFO- Task 0 started
+2022-04-05 21:24:23,170 -INFO- Task 1 started
+2022-04-05 21:24:23,170 -INFO- Task 2 started
+2022-04-05 21:24:23,171 -INFO- Task 3 started
+2022-04-05 21:24:23,172 -INFO- Task 4 started
+2022-04-05 21:24:23,173 -INFO- Task 5 started
+2022-04-05 21:24:23,174 -INFO- Task 6 started
+2022-04-05 21:24:23,175 -INFO- Task 7 started
+2022-04-05 21:24:23,175 -INFO- Task 8 started
+2022-04-05 21:24:23,176 -INFO- Task 9 started
+2022-04-05 21:24:23,178 -INFO- Task 10 started
+2022-04-05 21:24:23,178 -INFO- Task 11 started
+2022-04-05 21:24:23,179 -INFO- Task 12 started
+2022-04-05 21:24:23,179 -INFO- Task 13 started
+2022-04-05 21:24:23,180 -INFO- Task 14 started
+2022-04-05 21:24:23,180 -INFO- Task 15 started
+2022-04-05 21:24:23,181 -INFO- Task 16 started
+2022-04-05 21:24:23,181 -INFO- Task 17 started
+2022-04-05 21:24:23,182 -INFO- Task 18 started
+2022-04-05 21:24:23,183 -INFO- Task 19 started
+2022-04-05 21:24:25,587 -INFO- generating gene anntations
+2022-04-05 21:24:25,648 -INFO- 30 sequences classified by HMM
+2022-04-05 21:24:25,649 -INFO- see protein domain sequences in `Bdistachyon_556_v3.0.fa.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `Bdistachyon_556_v3.0.fa.mod.RM.consensi.fa.rexdb.dom.gff3`
+2022-04-05 21:24:25,654 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-05 21:24:25,683 -INFO- using the 80-80-80 rule
+2022-04-05 21:24:25,683 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-05 21:24:25,952 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-05 21:24:26,171 -INFO- 0 sequences classified in pass 2
+2022-04-05 21:24:26,171 -INFO- total 30 sequences classified.
+2022-04-05 21:24:26,171 -INFO- see classified sequences in `Bdistachyon_556_v3.0.fa.mod.RM.consensi.fa.rexdb.cls.tsv`
+2022-04-05 21:24:26,172 -INFO- writing library for RepeatMasker in `Bdistachyon_556_v3.0.fa.mod.RM.consensi.fa.rexdb.cls.lib`
+2022-04-05 21:24:26,194 -INFO- writing classified protein domains in `Bdistachyon_556_v3.0.fa.mod.RM.consensi.fa.rexdb.cls.pep`
+2022-04-05 21:24:26,197 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Gypsy                         6              6              4              0
+LINE            unknown                      17              0              0              0
+TIR             MuDR_Mutator                  4              0              0              0
+TIR             PIF_Harbinger                 2              0              0              0
+TIR             hAT                           1              0              0              0
+2022-04-05 21:24:26,197 -INFO- Pipeline done.
+2022-04-05 21:24:26,197 -INFO- cleaning the temporary directory ./tmp
+2022-04-05 21:36:56,446 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-04-05 21:36:56,452 -INFO- VARS: {'sequence': 'Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa.code', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa.code.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-04-05 21:36:56,452 -INFO- checking dependencies:
+2022-04-05 21:36:56,463 -INFO- hmmer	3.3.2	OK
+2022-04-05 21:36:56,529 -INFO- blastn	2.10.0+	OK
+2022-04-05 21:36:56,531 -INFO- check database rexdb
+2022-04-05 21:36:56,531 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-04-05 21:36:56,532 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-04-05 21:36:56,532 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-04-05 21:36:56,532 -INFO- Start classifying pipeline
+2022-04-05 21:36:56,827 -INFO- total 32439 sequences
+2022-04-05 21:36:56,827 -INFO- translating `Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa.code` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-04-05 21:37:32,095 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-04-05 21:37:33,549 -INFO- Creating server instance (pp-1.6.4.4)
+2022-04-05 21:37:33,549 -INFO- Running on Python 3.6.13 linux
+2022-04-05 21:37:34,759 -INFO- pp local server started with 20 workers
+2022-04-05 21:37:34,793 -INFO- Task 0 started
+2022-04-05 21:37:34,794 -INFO- Task 1 started
+2022-04-05 21:37:34,795 -INFO- Task 2 started
+2022-04-05 21:37:34,795 -INFO- Task 3 started
+2022-04-05 21:37:34,796 -INFO- Task 4 started
+2022-04-05 21:37:34,796 -INFO- Task 5 started
+2022-04-05 21:37:34,797 -INFO- Task 6 started
+2022-04-05 21:37:34,798 -INFO- Task 7 started
+2022-04-05 21:37:34,798 -INFO- Task 8 started
+2022-04-05 21:37:34,799 -INFO- Task 9 started
+2022-04-05 21:37:34,799 -INFO- Task 10 started
+2022-04-05 21:37:34,800 -INFO- Task 11 started
+2022-04-05 21:37:34,800 -INFO- Task 12 started
+2022-04-05 21:37:34,801 -INFO- Task 13 started
+2022-04-05 21:37:34,801 -INFO- Task 14 started
+2022-04-05 21:37:34,802 -INFO- Task 15 started
+2022-04-05 21:37:34,803 -INFO- Task 16 started
+2022-04-05 21:37:34,803 -INFO- Task 17 started
+2022-04-05 21:37:34,804 -INFO- Task 18 started
+2022-04-05 21:37:34,804 -INFO- Task 19 started
+2022-04-05 21:40:20,698 -INFO- generating gene anntations
+2022-04-05 21:40:23,412 -INFO- 412 sequences classified by HMM
+2022-04-05 21:40:23,412 -INFO- see protein domain sequences in `Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa.code.rexdb.dom.faa` and annotation gff3 file in `Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa.code.rexdb.dom.gff3`
+2022-04-05 21:40:23,412 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-04-05 21:40:24,367 -INFO- using the 80-80-80 rule
+2022-04-05 21:40:24,367 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-04-05 21:40:24,649 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-04-05 21:40:32,143 -INFO- 47 sequences classified in pass 2
+2022-04-05 21:40:32,144 -INFO- total 459 sequences classified.
+2022-04-05 21:40:32,144 -INFO- see classified sequences in `Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa.code.rexdb.cls.tsv`
+2022-04-05 21:40:32,144 -INFO- writing library for RepeatMasker in `Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa.code.rexdb.cls.lib`
+2022-04-05 21:40:33,018 -INFO- writing classified protein domains in `Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa.code.rexdb.cls.pep`
+2022-04-05 21:40:33,029 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Bel-Pao                       4              0              0              0
+LTR             Copia                        46             41             12              0
+LTR             Gypsy                        63             51             14              0
+LTR             Retrovirus                    1              0              0              0
+LTR             mixture                       3              0              0              0
+DIRS            unknown                       1              0              0              0
+LINE            unknown                     119              0              0              0
+TIR             Kolobok                       1              0              0              0
+TIR             MuDR_Mutator                 74              0              0              0
+TIR             PIF_Harbinger                 6              0              0              0
+TIR             Tc1_Mariner                   8              0              0              0
+TIR             hAT                          26              0              0              0
+Helitron        unknown                       8              0              0              0
+Maverick        unknown                      97              0              0              0
+mixture         mixture                       2              0              0              0
+2022-04-05 21:40:33,030 -INFO- Pipeline done.
+2022-04-05 21:40:33,030 -INFO- cleaning the temporary directory ./tmp
+Tue Apr  5 21:59:13 PDT 2022	Homology-based annotation of TEs using Bdistachyon_556_v3.0.fa.mod.EDTA.TElib.fa from scratch.
+
+	Command being timed: "shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bdist_v3.2/v3.2/assembly/Bdistachyon_556_v3.0.fa --cds /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bdist_v3.2/v3.2/annotation/Bdistachyon_556_v3.2.cds_primaryTranscriptOnly.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 20"
+	User time (seconds): 1661529.13
+	System time (seconds): 119387.85
+	Percent of CPU this job got: 2034%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 24:18:41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4309960
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1221
+	Minor (reclaiming a frame) page faults: 14523516856
+	Voluntary context switches: 183560891
+	Involuntary context switches: 13324774
+	Swaps: 0
+	File system inputs: 422360
+	File system outputs: 94128
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

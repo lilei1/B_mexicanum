@@ -1,0 +1,21 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Wed Mar 30 09:22:31 PDT 2022	Dependency checking:
+				All passed!
+
+	A CDS file /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Bsylvaticum.v2.1.prelim.annot/Bsylvaticumv2.1.primaryTrs.cds.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Wed Mar 30 09:22:39 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Wed Mar 30 12:32:48 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.intact.fa
+					Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.intact.gff3
+
+Wed Mar 30 12:32:48 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+

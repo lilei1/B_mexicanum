@@ -1,0 +1,145 @@
+Wed Mar 30 16:37:01 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Wed Mar 30 16:37:02 PDT 2022	Start to find LTR candidates.
+
+Wed Mar 30 16:37:02 PDT 2022	Identify LTR retrotransposon candidates from scratch.
+
+Warning: LOC list genome.fa.mod.ltrTE.veryfalse is empty.
+Wed Mar 30 16:37:21 PDT 2022	Finish finding LTR candidates.
+
+Wed Mar 30 16:37:22 PDT 2022	Start to find TIR candidates.
+
+Wed Mar 30 16:37:22 PDT 2022	Identify TIR candidates from scratch.
+
+Species: others
+Wed Mar 30 16:37:47 PDT 2022	Finish finding TIR candidates.
+
+Wed Mar 30 16:37:47 PDT 2022	Start to find Helitron candidates.
+
+Wed Mar 30 16:37:47 PDT 2022	Identify Helitron candidates from scratch.
+
+Wed Mar 30 16:38:17 PDT 2022	Finish finding Helitron candidates.
+
+Wed Mar 30 16:38:17 PDT 2022	Execution of EDTA_raw.pl is finished!
+
+2022-03-30 16:39:16,056 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-03-30 16:39:16,074 -INFO- VARS: {'sequence': 'genome.fa.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'genome.fa.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 30, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-03-30 16:39:16,074 -INFO- checking dependencies:
+2022-03-30 16:39:16,130 -INFO- hmmer	3.3.2	OK
+2022-03-30 16:39:16,188 -INFO- blastn	2.10.0+	OK
+2022-03-30 16:39:16,189 -INFO- check database rexdb
+2022-03-30 16:39:16,189 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-03-30 16:39:16,189 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-03-30 16:39:16,189 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-03-30 16:39:16,189 -INFO- Start classifying pipeline
+2022-03-30 16:39:16,204 -INFO- total 1 sequences
+2022-03-30 16:39:16,205 -INFO- translating `genome.fa.mod.RM.consensi.fa` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-03-30 16:39:16,209 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-03-30 16:39:16,223 -INFO- Creating server instance (pp-1.6.4.4)
+2022-03-30 16:39:16,223 -INFO- Running on Python 3.6.13 linux
+2022-03-30 16:39:18,053 -INFO- pp local server started with 30 workers
+2022-03-30 16:39:18,102 -INFO- Task 0 started
+2022-03-30 16:39:18,103 -INFO- Task 1 started
+2022-03-30 16:39:18,104 -INFO- Task 2 started
+2022-03-30 16:39:18,104 -INFO- Task 3 started
+2022-03-30 16:39:18,105 -INFO- Task 4 started
+2022-03-30 16:39:18,106 -INFO- Task 5 started
+2022-03-30 16:39:18,468 -INFO- generating gene anntations
+2022-03-30 16:39:18,471 -INFO- 0 sequences classified by HMM
+2022-03-30 16:39:18,471 -INFO- see protein domain sequences in `genome.fa.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `genome.fa.mod.RM.consensi.fa.rexdb.dom.gff3`
+2022-03-30 16:39:18,472 -WARNING- skipping pass-2 classification for zero classification in step-1
+2022-03-30 16:39:18,472 -INFO- see classified sequences in `genome.fa.mod.RM.consensi.fa.rexdb.cls.tsv`
+2022-03-30 16:39:18,472 -INFO- writing library for RepeatMasker in `genome.fa.mod.RM.consensi.fa.rexdb.cls.lib`
+2022-03-30 16:39:18,473 -INFO- writing classified protein domains in `genome.fa.mod.RM.consensi.fa.rexdb.cls.pep`
+2022-03-30 16:39:18,473 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+2022-03-30 16:39:18,474 -INFO- Pipeline done.
+2022-03-30 16:39:18,479 -INFO- cleaning the temporary directory ./tmp
+
+	Input file "genome.fa.mod.RepeatModeler.raw.fa.masked" not found!
+
+
+        Usage: perl cleanup_tandem.pl -f sample.fa [options] > sample.cln.fa 
+	Options:
+		-misschar	[n|l]	Define the letter representing unknown sequences; default: n. l: recognize lower case letters
+		-Nscreen	[0|1]	Enable (1) or disable (0) the -nc parameter; default: 1
+		-nc		[int]	Ambuguous sequence len cutoff; discard the entire sequence if > this number; default: 0
+		-nr		[0-1]	Ambuguous sequence percentage cutoff; discard the entire sequence if > this number; default: 1
+		-minlen		[int]	Minimum sequence length filter after clean up; default: 100 (bp)
+		-maxlen		[int]	Maximum sequence length filter after clean up; default: 25000 (bp)
+		-cleanN		[0|1]	Retain (0) or remove (1) the -misschar taget in output sequence; default: 0
+		-cleanT		[0|1]	Remove entire seq. if any terminal seq (20bp) has 15bp of N (1); disabled by default (0).
+		-minrm		[int]	The minimum length of -misschar to be removed if -cleanN 1; default: 1.
+		-trf		[0|1]	Enable (1) or disable (0) tandem repeat finder (trf); default: 1
+		-trf_path	path	Path to the trf program
+        
+2022-03-30 16:39:26,702 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-03-30 16:39:26,705 -INFO- VARS: {'sequence': 'genome.cds.fa.code', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'genome.cds.fa.code.rexdb', 'force_write_hmmscan': False, 'processors': 30, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-03-30 16:39:26,705 -INFO- checking dependencies:
+2022-03-30 16:39:26,715 -INFO- hmmer	3.3.2	OK
+2022-03-30 16:39:26,779 -INFO- blastn	2.10.0+	OK
+2022-03-30 16:39:26,787 -INFO- check database rexdb
+2022-03-30 16:39:26,788 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-03-30 16:39:26,788 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-03-30 16:39:26,788 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-03-30 16:39:26,788 -INFO- Start classifying pipeline
+2022-03-30 16:39:26,806 -INFO- total 139 sequences
+2022-03-30 16:39:26,807 -INFO- translating `genome.cds.fa.code` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-03-30 16:39:26,989 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-03-30 16:39:27,006 -INFO- Creating server instance (pp-1.6.4.4)
+2022-03-30 16:39:27,006 -INFO- Running on Python 3.6.13 linux
+2022-03-30 16:39:28,834 -INFO- pp local server started with 30 workers
+2022-03-30 16:39:28,870 -INFO- Task 0 started
+2022-03-30 16:39:28,872 -INFO- Task 1 started
+2022-03-30 16:39:28,872 -INFO- Task 2 started
+2022-03-30 16:39:28,873 -INFO- Task 3 started
+2022-03-30 16:39:28,873 -INFO- Task 4 started
+2022-03-30 16:39:28,874 -INFO- Task 5 started
+2022-03-30 16:39:28,875 -INFO- Task 6 started
+2022-03-30 16:39:28,875 -INFO- Task 7 started
+2022-03-30 16:39:28,876 -INFO- Task 8 started
+2022-03-30 16:39:28,877 -INFO- Task 9 started
+2022-03-30 16:39:28,878 -INFO- Task 10 started
+2022-03-30 16:39:28,878 -INFO- Task 11 started
+2022-03-30 16:39:28,879 -INFO- Task 12 started
+2022-03-30 16:39:28,879 -INFO- Task 13 started
+2022-03-30 16:39:28,880 -INFO- Task 14 started
+2022-03-30 16:39:28,880 -INFO- Task 15 started
+2022-03-30 16:39:28,881 -INFO- Task 16 started
+2022-03-30 16:39:28,882 -INFO- Task 17 started
+2022-03-30 16:39:28,882 -INFO- Task 18 started
+2022-03-30 16:39:28,883 -INFO- Task 19 started
+2022-03-30 16:39:28,884 -INFO- Task 20 started
+2022-03-30 16:39:28,884 -INFO- Task 21 started
+2022-03-30 16:39:28,885 -INFO- Task 22 started
+2022-03-30 16:39:28,886 -INFO- Task 23 started
+2022-03-30 16:39:28,886 -INFO- Task 24 started
+2022-03-30 16:39:28,887 -INFO- Task 25 started
+2022-03-30 16:39:28,888 -INFO- Task 26 started
+2022-03-30 16:39:28,889 -INFO- Task 27 started
+2022-03-30 16:39:28,890 -INFO- Task 28 started
+2022-03-30 16:39:28,891 -INFO- Task 29 started
+2022-03-30 16:39:29,737 -INFO- generating gene anntations
+2022-03-30 16:39:29,759 -INFO- 2 sequences classified by HMM
+2022-03-30 16:39:29,759 -INFO- see protein domain sequences in `genome.cds.fa.code.rexdb.dom.faa` and annotation gff3 file in `genome.cds.fa.code.rexdb.dom.gff3`
+2022-03-30 16:39:29,759 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-03-30 16:39:29,772 -INFO- using the 80-80-80 rule
+2022-03-30 16:39:29,772 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-03-30 16:39:29,998 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 30`
+2022-03-30 16:39:30,198 -INFO- 1 sequences classified in pass 2
+2022-03-30 16:39:30,199 -INFO- total 3 sequences classified.
+2022-03-30 16:39:30,199 -INFO- see classified sequences in `genome.cds.fa.code.rexdb.cls.tsv`
+2022-03-30 16:39:30,199 -INFO- writing library for RepeatMasker in `genome.cds.fa.code.rexdb.cls.lib`
+2022-03-30 16:39:30,212 -INFO- writing classified protein domains in `genome.cds.fa.code.rexdb.cls.pep`
+2022-03-30 16:39:30,212 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Gypsy                         1              1              1              0
+Maverick        unknown                       2              0              0              0
+2022-03-30 16:39:30,213 -INFO- Pipeline done.
+2022-03-30 16:39:30,213 -INFO- cleaning the temporary directory ./tmp
+Wed Mar 30 16:39:39 PDT 2022	Homology-based annotation of TEs using genome.fa.mod.EDTA.TElib.fa from scratch.
+

@@ -1,0 +1,48 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Sun Apr  3 09:09:53 PDT 2022	Dependency checking:
+				All passed!
+
+	A CDS file /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/BarbusculaBARB1.v3.1.prelim.annot/BarbusculaBARB1v3.1.primaryTrs.cds.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Sun Apr  3 09:10:00 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Sun Apr  3 11:20:24 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.intact.fa
+					Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.intact.gff3
+
+Sun Apr  3 11:20:24 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+
+Sun Apr  3 12:21:58 PDT 2022	EDTA advance filtering finished.
+
+Sun Apr  3 12:21:58 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+
+				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
+
+Sun Apr  3 16:19:42 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
+
+				Remove CDS-related sequences in the EDTA library:
+
+Sun Apr  3 16:59:26 PDT 2022	EDTA final stage finished! You may check out:
+				The final EDTA TE library: Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.TElib.fa
+Sun Apr  3 16:59:26 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
+
+Sun Apr  3 17:31:32 PDT 2022	TE annotation using the EDTA library has finished! Check out:
+				Whole-genome TE annotation (total TE: 38.12%): Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.TEanno.gff3
+				Whole-genome TE annotation summary: Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.TEanno.sum
+				Low-threshold TE masking for MAKER gene annotation (masked: 18.85%): Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.MAKER.masked
+
+Sun Apr  3 17:31:32 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
+
+Mon Apr  4 09:18:16 PDT 2022	Evaluation of TE annotation finished! Check out these files:
+
+				Overall: Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.TE.fa.stat.all.sum
+				Nested: Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.TE.fa.stat.nested.sum
+				Non-nested: Brachypodium_arbuscula_var_BARB1.mainGenome.fasta.mod.EDTA.TE.fa.stat.redun.sum
+

@@ -1,0 +1,48 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Mon Apr  4 16:19:09 PDT 2022	Dependency checking:
+				All passed!
+
+	A CDS file /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bhybridum/annotation/Bhybridum_463_v1.1.cds_primaryTranscriptOnly_cutName.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Mon Apr  4 16:19:19 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Mon Apr  4 21:47:26 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					Bhybridum_463_v1.0.fa.mod.EDTA.intact.fa
+					Bhybridum_463_v1.0.fa.mod.EDTA.intact.gff3
+
+Mon Apr  4 21:47:26 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+
+Mon Apr  4 23:51:25 PDT 2022	EDTA advance filtering finished.
+
+Mon Apr  4 23:51:25 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+
+				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
+
+Tue Apr  5 13:09:51 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
+
+				Remove CDS-related sequences in the EDTA library:
+
+Tue Apr  5 14:13:19 PDT 2022	EDTA final stage finished! You may check out:
+				The final EDTA TE library: Bhybridum_463_v1.0.fa.mod.EDTA.TElib.fa
+Tue Apr  5 14:13:19 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
+
+Tue Apr  5 15:30:53 PDT 2022	TE annotation using the EDTA library has finished! Check out:
+				Whole-genome TE annotation (total TE: 37.28%): Bhybridum_463_v1.0.fa.mod.EDTA.TEanno.gff3
+				Whole-genome TE annotation summary: Bhybridum_463_v1.0.fa.mod.EDTA.TEanno.sum
+				Low-threshold TE masking for MAKER gene annotation (masked: 15.83%): Bhybridum_463_v1.0.fa.mod.MAKER.masked
+
+Tue Apr  5 15:30:53 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
+
+Fri Apr  8 14:56:14 PDT 2022	Evaluation of TE annotation finished! Check out these files:
+
+				Overall: Bhybridum_463_v1.0.fa.mod.EDTA.TE.fa.stat.all.sum
+				Nested: Bhybridum_463_v1.0.fa.mod.EDTA.TE.fa.stat.nested.sum
+				Non-nested: Bhybridum_463_v1.0.fa.mod.EDTA.TE.fa.stat.redun.sum
+

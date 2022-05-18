@@ -1,0 +1,198 @@
+Wed Mar 30 17:01:05 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Wed Mar 30 17:01:08 PDT 2022	Start to find LTR candidates.
+
+Wed Mar 30 17:01:08 PDT 2022	Existing result file Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.LTR.raw.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+Wed Mar 30 17:01:08 PDT 2022	Finish finding LTR candidates.
+
+Wed Mar 30 17:01:08 PDT 2022	Start to find TIR candidates.
+
+Wed Mar 30 17:01:08 PDT 2022	Existing result file Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.TIR.raw.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+Wed Mar 30 17:01:09 PDT 2022	Finish finding TIR candidates.
+
+Wed Mar 30 17:01:09 PDT 2022	Start to find Helitron candidates.
+
+Wed Mar 30 17:01:09 PDT 2022	Existing result file Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.Helitron.raw.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+Wed Mar 30 17:01:10 PDT 2022	Finish finding Helitron candidates.
+
+Wed Mar 30 17:01:10 PDT 2022	Execution of EDTA_raw.pl is finished!
+
+2022-03-30 22:45:42,002 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-03-30 22:45:42,207 -INFO- VARS: {'sequence': 'Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 30, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-03-30 22:45:42,207 -INFO- checking dependencies:
+2022-03-30 22:45:42,316 -INFO- hmmer	3.3.2	OK
+2022-03-30 22:45:42,387 -INFO- blastn	2.10.0+	OK
+2022-03-30 22:45:42,388 -INFO- check database rexdb
+2022-03-30 22:45:42,389 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-03-30 22:45:42,389 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-03-30 22:45:42,389 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-03-30 22:45:42,389 -INFO- Start classifying pipeline
+2022-03-30 22:45:42,421 -INFO- total 350 sequences
+2022-03-30 22:45:42,421 -INFO- translating `Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.RM.consensi.fa` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-03-30 22:45:42,787 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-03-30 22:45:42,816 -INFO- Creating server instance (pp-1.6.4.4)
+2022-03-30 22:45:42,816 -INFO- Running on Python 3.6.13 linux
+2022-03-30 22:45:44,752 -INFO- pp local server started with 30 workers
+2022-03-30 22:45:44,816 -INFO- Task 0 started
+2022-03-30 22:45:44,818 -INFO- Task 1 started
+2022-03-30 22:45:44,819 -INFO- Task 2 started
+2022-03-30 22:45:44,819 -INFO- Task 3 started
+2022-03-30 22:45:44,820 -INFO- Task 4 started
+2022-03-30 22:45:44,821 -INFO- Task 5 started
+2022-03-30 22:45:44,821 -INFO- Task 6 started
+2022-03-30 22:45:44,822 -INFO- Task 7 started
+2022-03-30 22:45:44,823 -INFO- Task 8 started
+2022-03-30 22:45:44,823 -INFO- Task 9 started
+2022-03-30 22:45:44,824 -INFO- Task 10 started
+2022-03-30 22:45:44,825 -INFO- Task 11 started
+2022-03-30 22:45:44,825 -INFO- Task 12 started
+2022-03-30 22:45:44,825 -INFO- Task 13 started
+2022-03-30 22:45:44,826 -INFO- Task 14 started
+2022-03-30 22:45:44,826 -INFO- Task 15 started
+2022-03-30 22:45:44,827 -INFO- Task 16 started
+2022-03-30 22:45:44,827 -INFO- Task 17 started
+2022-03-30 22:45:44,827 -INFO- Task 18 started
+2022-03-30 22:45:44,827 -INFO- Task 19 started
+2022-03-30 22:45:44,828 -INFO- Task 20 started
+2022-03-30 22:45:44,828 -INFO- Task 21 started
+2022-03-30 22:45:44,828 -INFO- Task 22 started
+2022-03-30 22:45:44,828 -INFO- Task 23 started
+2022-03-30 22:45:44,829 -INFO- Task 24 started
+2022-03-30 22:45:44,829 -INFO- Task 25 started
+2022-03-30 22:45:44,829 -INFO- Task 26 started
+2022-03-30 22:45:44,829 -INFO- Task 27 started
+2022-03-30 22:45:44,830 -INFO- Task 28 started
+2022-03-30 22:45:44,830 -INFO- Task 29 started
+2022-03-30 22:45:46,423 -INFO- generating gene anntations
+2022-03-30 22:45:46,475 -INFO- 31 sequences classified by HMM
+2022-03-30 22:45:46,476 -INFO- see protein domain sequences in `Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.dom.gff3`
+2022-03-30 22:45:46,476 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-03-30 22:45:46,492 -INFO- using the 80-80-80 rule
+2022-03-30 22:45:46,492 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-03-30 22:45:46,750 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 30`
+2022-03-30 22:45:46,959 -INFO- 0 sequences classified in pass 2
+2022-03-30 22:45:46,959 -INFO- total 31 sequences classified.
+2022-03-30 22:45:46,959 -INFO- see classified sequences in `Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.cls.tsv`
+2022-03-30 22:45:46,960 -INFO- writing library for RepeatMasker in `Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.cls.lib`
+2022-03-30 22:45:46,982 -INFO- writing classified protein domains in `Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.RM.consensi.fa.rexdb.cls.pep`
+2022-03-30 22:45:46,984 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Copia                         1              1              1              0
+LTR             Gypsy                         2              2              1              0
+LINE            unknown                      18              0              0              0
+TIR             EnSpm_CACTA                   4              0              0              0
+TIR             MuDR_Mutator                  4              0              0              0
+TIR             hAT                           2              0              0              0
+2022-03-30 22:45:46,984 -INFO- Pipeline done.
+2022-03-30 22:45:46,984 -INFO- cleaning the temporary directory ./tmp
+2022-03-30 23:00:35,398 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-03-30 23:00:35,401 -INFO- VARS: {'sequence': 'Bsylvaticumv2.1.primaryTrs.cds.fa.code', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Bsylvaticumv2.1.primaryTrs.cds.fa.code.rexdb', 'force_write_hmmscan': False, 'processors': 30, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-03-30 23:00:35,401 -INFO- checking dependencies:
+2022-03-30 23:00:35,411 -INFO- hmmer	3.3.2	OK
+2022-03-30 23:00:35,478 -INFO- blastn	2.10.0+	OK
+2022-03-30 23:00:35,479 -INFO- check database rexdb
+2022-03-30 23:00:35,479 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-03-30 23:00:35,479 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-03-30 23:00:35,480 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-03-30 23:00:35,480 -INFO- Start classifying pipeline
+2022-03-30 23:00:35,772 -INFO- total 31643 sequences
+2022-03-30 23:00:35,773 -INFO- translating `Bsylvaticumv2.1.primaryTrs.cds.fa.code` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-03-30 23:01:11,259 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-03-30 23:01:12,661 -INFO- Creating server instance (pp-1.6.4.4)
+2022-03-30 23:01:12,661 -INFO- Running on Python 3.6.13 linux
+2022-03-30 23:01:14,547 -INFO- pp local server started with 30 workers
+2022-03-30 23:01:14,582 -INFO- Task 0 started
+2022-03-30 23:01:14,583 -INFO- Task 1 started
+2022-03-30 23:01:14,584 -INFO- Task 2 started
+2022-03-30 23:01:14,584 -INFO- Task 3 started
+2022-03-30 23:01:14,585 -INFO- Task 4 started
+2022-03-30 23:01:14,586 -INFO- Task 5 started
+2022-03-30 23:01:14,586 -INFO- Task 6 started
+2022-03-30 23:01:14,587 -INFO- Task 7 started
+2022-03-30 23:01:14,587 -INFO- Task 8 started
+2022-03-30 23:01:14,588 -INFO- Task 9 started
+2022-03-30 23:01:14,589 -INFO- Task 10 started
+2022-03-30 23:01:14,589 -INFO- Task 11 started
+2022-03-30 23:01:14,590 -INFO- Task 12 started
+2022-03-30 23:01:14,591 -INFO- Task 13 started
+2022-03-30 23:01:14,592 -INFO- Task 14 started
+2022-03-30 23:01:14,592 -INFO- Task 15 started
+2022-03-30 23:01:14,593 -INFO- Task 16 started
+2022-03-30 23:01:14,593 -INFO- Task 17 started
+2022-03-30 23:01:14,594 -INFO- Task 18 started
+2022-03-30 23:01:14,595 -INFO- Task 19 started
+2022-03-30 23:01:14,595 -INFO- Task 20 started
+2022-03-30 23:01:14,596 -INFO- Task 21 started
+2022-03-30 23:01:14,597 -INFO- Task 22 started
+2022-03-30 23:01:14,598 -INFO- Task 23 started
+2022-03-30 23:01:14,598 -INFO- Task 24 started
+2022-03-30 23:01:14,599 -INFO- Task 25 started
+2022-03-30 23:01:14,599 -INFO- Task 26 started
+2022-03-30 23:01:14,600 -INFO- Task 27 started
+2022-03-30 23:01:14,601 -INFO- Task 28 started
+2022-03-30 23:01:14,602 -INFO- Task 29 started
+2022-03-30 23:02:49,060 -INFO- generating gene anntations
+2022-03-30 23:02:51,754 -INFO- 355 sequences classified by HMM
+2022-03-30 23:02:51,754 -INFO- see protein domain sequences in `Bsylvaticumv2.1.primaryTrs.cds.fa.code.rexdb.dom.faa` and annotation gff3 file in `Bsylvaticumv2.1.primaryTrs.cds.fa.code.rexdb.dom.gff3`
+2022-03-30 23:02:51,754 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-03-30 23:02:52,732 -INFO- using the 80-80-80 rule
+2022-03-30 23:02:52,732 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-03-30 23:02:53,020 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 30`
+2022-03-30 23:03:00,939 -INFO- 48 sequences classified in pass 2
+2022-03-30 23:03:00,939 -INFO- total 403 sequences classified.
+2022-03-30 23:03:00,939 -INFO- see classified sequences in `Bsylvaticumv2.1.primaryTrs.cds.fa.code.rexdb.cls.tsv`
+2022-03-30 23:03:00,939 -INFO- writing library for RepeatMasker in `Bsylvaticumv2.1.primaryTrs.cds.fa.code.rexdb.cls.lib`
+2022-03-30 23:03:01,640 -INFO- writing classified protein domains in `Bsylvaticumv2.1.primaryTrs.cds.fa.code.rexdb.cls.pep`
+2022-03-30 23:03:01,649 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Bel-Pao                       3              0              0              0
+LTR             Copia                        82             71             14              0
+LTR             Gypsy                        62             55             14              0
+LTR             Retrovirus                    1              0              0              0
+LINE            unknown                      55              0              0              0
+TIR             MuDR_Mutator                 32              0              0              0
+TIR             PIF_Harbinger                14              0              0              0
+TIR             Tc1_Mariner                   1              0              0              0
+TIR             hAT                          34              0              0              0
+Helitron        unknown                       9              0              0              0
+Maverick        unknown                     110              0              0              0
+2022-03-30 23:03:01,649 -INFO- Pipeline done.
+2022-03-30 23:03:01,649 -INFO- cleaning the temporary directory ./tmp
+Wed Mar 30 23:37:01 PDT 2022	Homology-based annotation of TEs using Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta.mod.EDTA.TElib.fa from scratch.
+
+	Command being timed: "shifter -i oushujun/edta:2.0.0 EDTA.pl --genome /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Bsylvaticum.v2.1.prelim.annot/Brachypodium_sylvaticum_var_AIN1.mainGenome.fasta --cds /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Bsylvaticum.v2.1.prelim.annot/Bsylvaticumv2.1.primaryTrs.cds.fa --overwrite 0 --sensitive 1 --anno 1 --evaluate 1 --threads 30"
+	User time (seconds): 3204767.94
+	System time (seconds): 250734.36
+	Percent of CPU this job got: 2943%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 32:36:26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5317052
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 569
+	Minor (reclaiming a frame) page faults: 25224910977
+	Voluntary context switches: 1890828026
+	Involuntary context switches: 42741455
+	Swaps: 0
+	File system inputs: 230858
+	File system outputs: 130808
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,27 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+Fri May  6 12:56:17 PDT 2022	Dependency checking:
+				All passed!
+
+	A CDS file /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/HvulgareMorexV3/annotation/HvulgareMorex_702_V3.cds_primaryTranscriptOnly.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+
+Fri May  6 12:57:02 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Fri May  6 12:57:16 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					HvulgareMorex_702_V3.fa.mod.EDTA.intact.fa
+					HvulgareMorex_702_V3.fa.mod.EDTA.intact.gff3
+
+Fri May  6 12:57:16 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+
+Fri May  6 15:48:39 PDT 2022	EDTA advance filtering finished.
+
+Fri May  6 15:48:39 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+
+				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
+
