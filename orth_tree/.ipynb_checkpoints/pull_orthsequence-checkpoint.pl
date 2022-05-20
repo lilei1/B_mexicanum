@@ -1,11 +1,11 @@
 #!/usr/bin/perl
-##by Li Lei, 201907010,Walnut Creek;
-#this is to count the proportion of different LRT from LTR_retriever;
+##by Li Lei, 20200520;
+#this is to pull the sequence from the 2 copy of the Bmex and two copy of Bhyb;
 #usage: 
 use strict;
 use warnings;
 use Data::Dumper;
-my ($fasta1,$fasta2,$fasta3,$fasta4,$fasta5,$fasta6,$fasta7,$file)= @ARGV;
+my ($fasta1,$fasta2,$fasta3,$fasta4,$fasta5,$fasta6,$fasta7,$fasta8,$file)= @ARGV;
 #my $fasta1= $ARGV[0];
 
 my %id2seq1 = ();#Bsyl
@@ -149,6 +149,28 @@ open(F7,  "$fasta7") or die "Could not open $fasta7";
 #print Dumper(\%id2seq1);
 close (F7);
 
+my %id2seq8 = (); #Hvul
+my $id8 = '';
+open(F8,  "$fasta8") or die "Could not open $fasta8";
+    while(<F8>){
+        chomp;
+        if($_ =~ /^>(.+)/){
+             my $seqid = $1;
+             my @rtemp = split(/\s+/,$seqid);
+             #print "$rtemp[0]\n";
+             my @gene = split(/\./,$rtemp[0]);
+             #print "$gene[1]\n";
+              $id8 = $gene[0].".".$gene[1].".".$gene[2].".".$gene[3];
+             #print "$id1\n";          
+        }else{
+            $id2seq8{$id8} .= $_;
+        }
+    }
+#print Dumper(\%id2seq1);
+close (F8);
+
+
+
 
 open(GENEID,  "$file") or die "Could not open $file";
 #my $header = <SNPID>;
@@ -173,6 +195,7 @@ foreach my $row (<GENEID>){
            $BrameID2=~ s/^\s+|\s+$//g;
         my $BrastID = $rtemp[5];
         my $BrasylID = $rtemp[6];
+        my $HvulID = $rtemp[7];
         my $OsID = $rtemp[8];
         my $new_file = $orthoID . ".fasta";
         open (OUTFILE, ">$new_file")or die "Can't open: $new_file $!";
@@ -212,6 +235,10 @@ foreach my $row (<GENEID>){
         if (exists $id2seq7{$BrahyID2}){
             print OUTFILE ">$BrahyID2\n";
             print OUTFILE "$id2seq7{$BrahyID2}\n";
+        }
+        if (exists $id2seq8{$HvulID}){
+            print OUTFILE ">$HvulID\n";
+            print OUTFILE "$id2seq8{$HvulID}\n";
         }
 }
 close (OUTFILE);

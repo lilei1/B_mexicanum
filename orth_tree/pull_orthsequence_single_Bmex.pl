@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 ##by Li Lei, 20200520;
-#this is to pull the sequence from the 2 copy of the Bmex and two copy of Bhyb;
+#this is to pull the sequence from the 1 copy of the Bmex and two copy of Bhyb;
 #usage: 
 use strict;
 use warnings;
@@ -189,10 +189,10 @@ foreach my $row (<GENEID>){
            $BrahyID2=~ s/^\s+|\s+$//g;
         my $BrameID = $rtemp[4];
         #print "$Bhy[1]\n";
-        my @Bram = split(/,/,$BrameID);
-        my $BrameID1 = $Bram[0];
-        my $BrameID2 = $Bram[1];
-           $BrameID2=~ s/^\s+|\s+$//g;
+        #my @Bram = split(/,/,$BrameID);
+        #my $BrameID1 = $Bram[0];
+        #my $BrameID2 = $Bram[1];
+        #   $BrameID2=~ s/^\s+|\s+$//g;
         my $BrastID = $rtemp[5];
         my $BrasylID = $rtemp[6];
         my $HvulID = $rtemp[7];
@@ -204,14 +204,14 @@ foreach my $row (<GENEID>){
             print OUTFILE ">$BrasylID\n";
             print OUTFILE "$id2seq1{$BrasylID}\n";
         }
-        if (exists $id2seq2{$BrameID1}){
-            print OUTFILE ">$BrameID1\n";
-            print OUTFILE "$id2seq2{$BrameID1}\n";
+        if (exists $id2seq2{$BrameID}){
+            print OUTFILE ">$BrameID\n";
+            print OUTFILE "$id2seq2{$BrameID}\n";
         }
-        if (exists $id2seq2{$BrameID2}){
-            print OUTFILE ">$BrameID2\n";
-            print OUTFILE "$id2seq2{$BrameID2}\n";
-        }
+        #if (exists $id2seq2{$BrameID2}){
+        #    print OUTFILE ">$BrameID2\n";
+        #    print OUTFILE "$id2seq2{$BrameID2}\n";
+        #}
         if (exists $id2seq3{$BarbuID}){
             print OUTFILE ">$BarbuID\n";
             print OUTFILE "$id2seq3{$BarbuID}\n";

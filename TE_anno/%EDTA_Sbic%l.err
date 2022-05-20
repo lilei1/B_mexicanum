@@ -1,0 +1,141 @@
+Wed May 18 19:29:38 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+
+Wed May 18 19:29:40 PDT 2022	Start to find LTR candidates.
+
+Wed May 18 19:29:41 PDT 2022	Existing result file Sbicolor_454_v3.0.1.fa.mod.LTR.raw.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+Wed May 18 19:29:41 PDT 2022	Finish finding LTR candidates.
+
+Wed May 18 19:29:41 PDT 2022	Start to find TIR candidates.
+
+Wed May 18 19:29:41 PDT 2022	Existing result file Sbicolor_454_v3.0.1.fa.mod.TIR.raw.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+Wed May 18 19:29:42 PDT 2022	Finish finding TIR candidates.
+
+Wed May 18 19:29:42 PDT 2022	Start to find Helitron candidates.
+
+Wed May 18 19:29:42 PDT 2022	Existing result file Sbicolor_454_v3.0.1.fa.mod.Helitron.raw.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+Wed May 18 19:29:42 PDT 2022	Finish finding Helitron candidates.
+
+Wed May 18 19:29:42 PDT 2022	Execution of EDTA_raw.pl is finished!
+
+Wed May 18 22:24:28 PDT 2022	Existing RepeatModeler result file Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+2022-05-18 22:24:32,635 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-05-18 22:24:32,651 -INFO- VARS: {'sequence': 'Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-05-18 22:24:32,651 -INFO- checking dependencies:
+2022-05-18 22:24:32,738 -INFO- hmmer	3.3.2	OK
+2022-05-18 22:24:32,810 -INFO- blastn	2.10.0+	OK
+2022-05-18 22:24:32,811 -INFO- check database rexdb
+2022-05-18 22:24:32,811 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-05-18 22:24:32,811 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-05-18 22:24:32,811 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-05-18 22:24:32,811 -INFO- Start classifying pipeline
+2022-05-18 22:24:32,869 -INFO- total 630 sequences
+2022-05-18 22:24:32,869 -INFO- translating `Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-05-18 22:24:33,361 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-05-18 22:24:33,362 -INFO- use existed non-empty `Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa.rexdb.domtbl` and skip hmmscan
+2022-05-18 22:24:33,362 -INFO- generating gene anntations
+2022-05-18 22:24:37,667 -INFO- 48 sequences classified by HMM
+2022-05-18 22:24:37,668 -INFO- see protein domain sequences in `Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa.rexdb.dom.faa` and annotation gff3 file in `Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa.rexdb.dom.gff3`
+2022-05-18 22:24:37,668 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-05-18 22:24:37,701 -INFO- using the 80-80-80 rule
+2022-05-18 22:24:37,701 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-05-18 22:24:37,938 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-05-18 22:24:38,176 -INFO- 6 sequences classified in pass 2
+2022-05-18 22:24:38,177 -INFO- total 54 sequences classified.
+2022-05-18 22:24:38,177 -INFO- see classified sequences in `Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa.rexdb.cls.tsv`
+2022-05-18 22:24:38,177 -INFO- writing library for RepeatMasker in `Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa.rexdb.cls.lib`
+2022-05-18 22:24:38,202 -INFO- writing classified protein domains in `Sbicolor_454_v3.0.1.fa.mod.RM.consensi.fa.rexdb.cls.pep`
+2022-05-18 22:24:38,207 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Gypsy                        15             14              4              0
+LINE            unknown                      32              0              0              0
+TIR             EnSpm_CACTA                   4              0              0              0
+TIR             MuDR_Mutator                  2              0              0              0
+TIR             hAT                           1              0              0              0
+2022-05-18 22:24:38,207 -INFO- Pipeline done.
+2022-05-18 22:24:38,207 -INFO- cleaning the temporary directory ./tmp
+2022-05-18 22:41:00,931 -WARNING- Grid computing is not available because DRMAA not configured properly: Could not find drmaa library.  Please specify its full path using the environment variable DRMAA_LIBRARY_PATH
+2022-05-18 22:41:00,934 -INFO- VARS: {'sequence': 'Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa.code', 'hmm_database': 'rexdb', 'seq_type': 'nucl', 'prefix': 'Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa.code.rexdb', 'force_write_hmmscan': False, 'processors': 20, 'tmp_dir': './tmp', 'min_coverage': 20, 'max_evalue': 0.001, 'disable_pass2': False, 'pass2_rule': '80-80-80', 'no_library': False, 'no_reverse': False, 'no_cleanup': False, 'p2_identity': 80.0, 'p2_coverage': 80.0, 'p2_length': 80.0}
+2022-05-18 22:41:00,934 -INFO- checking dependencies:
+2022-05-18 22:41:00,945 -INFO- hmmer	3.3.2	OK
+2022-05-18 22:41:01,009 -INFO- blastn	2.10.0+	OK
+2022-05-18 22:41:01,010 -INFO- check database rexdb
+2022-05-18 22:41:01,010 -INFO- db path: /opt/conda/lib/python3.6/site-packages/TEsorter/database
+2022-05-18 22:41:01,010 -INFO- db file: REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm
+2022-05-18 22:41:01,011 -INFO- REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm	OK
+2022-05-18 22:41:01,011 -INFO- Start classifying pipeline
+2022-05-18 22:41:01,319 -INFO- total 34129 sequences
+2022-05-18 22:41:01,319 -INFO- translating `Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa.code` in six frames
+/opt/conda/lib/python3.6/site-packages/Bio/Seq.py:2983: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  BiopythonWarning,
+2022-05-18 22:41:38,407 -INFO- HMM scanning against `/opt/conda/lib/python3.6/site-packages/TEsorter/database/REXdb_protein_database_viridiplantae_v3.0_plus_metazoa_v3.hmm`
+2022-05-18 22:41:39,886 -INFO- Creating server instance (pp-1.6.4.4)
+2022-05-18 22:41:39,887 -INFO- Running on Python 3.6.13 linux
+2022-05-18 22:41:41,204 -INFO- pp local server started with 20 workers
+2022-05-18 22:41:41,268 -INFO- Task 0 started
+2022-05-18 22:41:41,270 -INFO- Task 1 started
+2022-05-18 22:41:41,271 -INFO- Task 2 started
+2022-05-18 22:41:41,272 -INFO- Task 3 started
+2022-05-18 22:41:41,272 -INFO- Task 4 started
+2022-05-18 22:41:41,273 -INFO- Task 5 started
+2022-05-18 22:41:41,273 -INFO- Task 6 started
+2022-05-18 22:41:41,274 -INFO- Task 7 started
+2022-05-18 22:41:41,275 -INFO- Task 8 started
+2022-05-18 22:41:41,276 -INFO- Task 9 started
+2022-05-18 22:41:41,277 -INFO- Task 10 started
+2022-05-18 22:41:41,278 -INFO- Task 11 started
+2022-05-18 22:41:41,279 -INFO- Task 12 started
+2022-05-18 22:41:41,280 -INFO- Task 13 started
+2022-05-18 22:41:41,282 -INFO- Task 14 started
+2022-05-18 22:41:41,283 -INFO- Task 15 started
+2022-05-18 22:41:41,284 -INFO- Task 16 started
+2022-05-18 22:41:41,285 -INFO- Task 17 started
+2022-05-18 22:41:41,286 -INFO- Task 18 started
+2022-05-18 22:41:41,287 -INFO- Task 19 started
+2022-05-18 22:44:34,311 -INFO- generating gene anntations
+2022-05-18 22:44:37,118 -INFO- 496 sequences classified by HMM
+2022-05-18 22:44:37,118 -INFO- see protein domain sequences in `Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa.code.rexdb.dom.faa` and annotation gff3 file in `Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa.code.rexdb.dom.gff3`
+2022-05-18 22:44:37,118 -INFO- classifying the unclassified sequences by searching against the classified ones
+2022-05-18 22:44:38,139 -INFO- using the 80-80-80 rule
+2022-05-18 22:44:38,139 -INFO- run CMD: `makeblastdb -in ./tmp/pass1_classified.fa -dbtype nucl`
+2022-05-18 22:44:38,564 -INFO- run CMD: `blastn -query ./tmp/pass1_unclassified.fa -db ./tmp/pass1_classified.fa -out ./tmp/pass1_unclassified.fa.blastout -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovs qcovhsp sstrand' -num_threads 20`
+2022-05-18 22:44:47,385 -INFO- 82 sequences classified in pass 2
+2022-05-18 22:44:47,385 -INFO- total 578 sequences classified.
+2022-05-18 22:44:47,385 -INFO- see classified sequences in `Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.tsv`
+2022-05-18 22:44:47,385 -INFO- writing library for RepeatMasker in `Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.lib`
+2022-05-18 22:44:48,201 -INFO- writing classified protein domains in `Sbicolor_454_v3.1.1.cds_primaryTranscriptOnly.fa.code.rexdb.cls.pep`
+2022-05-18 22:44:50,604 -INFO- Summary of classifications:
+Order           Superfamily      # of Sequences# of Clade Sequences    # of Clades# of full Domains
+LTR             Bel-Pao                       5              0              0              0
+LTR             Copia                       261            201             13              0
+LTR             Gypsy                        69             65             14              2
+LTR             Retrovirus                    3              0              0              0
+LTR             mixture                       1              0              0              0
+pararetrovirus  unknown                       1              0              0              0
+Penelope        unknown                       2              0              0              0
+LINE            unknown                      56              0              0              0
+TIR             EnSpm_CACTA                  13              0              0              0
+TIR             MuDR_Mutator                 55              0              0              0
+TIR             Novosib                       1              0              0              0
+TIR             PIF_Harbinger                 1              0              0              0
+TIR             hAT                          10              0              0              0
+Helitron        unknown                       2              0              0              0
+Maverick        unknown                      96              0              0              0
+mixture         mixture                       2              0              0              0
+2022-05-18 22:44:50,605 -INFO- Pipeline done.
+2022-05-18 22:44:50,605 -INFO- cleaning the temporary directory ./tmp
+Wed May 18 23:20:03 PDT 2022	Homology-based annotation of TEs using Sbicolor_454_v3.0.1.fa.mod.EDTA.TElib.fa from scratch.
+
