@@ -36,7 +36,9 @@ sbatch --array=0-1 -C haswell run_muscle.job
 
 ```
 
+### 4 build the tree with iqtree
 
+<<<<<<< HEAD
 Since Bruno want to add the Hvul and single copy of genes from Bmex, 
 so I've added other two scripts
 
@@ -104,3 +106,9 @@ awk '$2 == "1" && $3 == "1" && $4 == "1" && $5 == "1" && $6 == "1" && $7 == "1" 
 ```
 tar -czvf fasta.tar.gz 
 ```
+=======
+```
+./iqtree -s ~/plantbox/bscratch/llei2019/software/OG0020886.MSA.fasta -o OsKitaake03g033100 -redo -m GTR+I+G 
+
+```
+>>>>>>> 3aab905c1c7b70bbeb0edd8d4c404bf7635b3664

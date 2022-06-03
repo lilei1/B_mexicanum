@@ -6,58 +6,37 @@
 
 
 
-Fri May  6 13:15:57 PDT 2022	Dependency checking:
+Wed May 18 19:29:27 PDT 2022	Dependency checking:
 				All passed!
 
-	A CDS file /global/cfs/cdirs/plantbox/llei/cscratch/CSP_Dave/Genome_assembly/Sbicolor/annotation/ is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
+	A CDS file /global/u2/l/llei2019/plantbox/cscratch/CSP_Dave/Genome_assembly/Bmexicanum/annotation/Bmexicanum_577_v1.1.cds_primaryTranscriptOnly.fa is provided via --cds. Please make sure this is the DNA sequence of coding regions only.
 
-Fri May  6 13:16:32 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
-Fri May  6 14:22:39 PDT 2022	EDTA advance filtering finished.
+Wed May 18 19:29:44 PDT 2022	Obtain raw TE libraries using various structure-based programs: 
+Wed May 18 19:29:56 PDT 2022	Obtain raw TE libraries finished.
+				All intact TEs found by EDTA: 
+					Bmexicanum_577_v1.0.fa.mod.EDTA.intact.fa
+					Bmexicanum_577_v1.0.fa.mod.EDTA.intact.gff3
 
-Fri May  6 14:22:39 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
+Wed May 18 19:29:56 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
+
+Wed May 18 20:51:19 PDT 2022	EDTA advance filtering finished.
+
+Wed May 18 20:51:19 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
 
 				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
 
-Fri May  6 20:32:36 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
+Thu May 19 02:57:55 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
 
 				Remove CDS-related sequences in the EDTA library:
 
-Fri May  6 21:45:05 PDT 2022	EDTA final stage finished! You may check out:
+Thu May 19 04:10:10 PDT 2022	EDTA final stage finished! You may check out:
 				The final EDTA TE library: Bmexicanum_577_v1.0.fa.mod.EDTA.TElib.fa
-Fri May  6 21:45:05 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
+Thu May 19 04:10:10 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
 
-Fri May  6 22:46:44 PDT 2022	Obtain raw TE libraries finished.
-				All intact TEs found by EDTA: 
-					Sbicolor_454_v3.0.1.fa.mod.EDTA.intact.fa
-					Sbicolor_454_v3.0.1.fa.mod.EDTA.intact.gff3
-
-Fri May  6 22:46:45 PDT 2022	Perform EDTA advance filtering for raw TE candidates and generate the stage 1 library: 
-
-Fri May  6 23:56:46 PDT 2022	EDTA advance filtering finished.
-
-Fri May  6 23:56:46 PDT 2022	Perform EDTA final steps to generate a non-redundant comprehensive TE library:
-
-				Use RepeatModeler to identify any remaining TEs that are missed by structure-based methods.
-
-Sat May  7 01:43:54 PDT 2022	TE annotation using the EDTA library has finished! Check out:
+Thu May 19 08:11:23 PDT 2022	TE annotation using the EDTA library has finished! Check out:
 				Whole-genome TE annotation (total TE: 71.29%): Bmexicanum_577_v1.0.fa.mod.EDTA.TEanno.gff3
 				Whole-genome TE annotation summary: Bmexicanum_577_v1.0.fa.mod.EDTA.TEanno.sum
 				Low-threshold TE masking for MAKER gene annotation (masked: 48.92%): Bmexicanum_577_v1.0.fa.mod.MAKER.masked
 
-Sat May  7 01:43:56 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
-
-Sat May  7 11:11:01 PDT 2022	Clean up TE-related sequences in the CDS file with TEsorter:
-
-				Remove CDS-related sequences in the EDTA library:
-
-Sat May  7 11:56:42 PDT 2022	EDTA final stage finished! You may check out:
-				The final EDTA TE library: Sbicolor_454_v3.0.1.fa.mod.EDTA.TElib.fa
-Sat May  7 11:56:42 PDT 2022	Perform post-EDTA analysis for whole-genome annotation:
-
-Sat May  7 14:03:09 PDT 2022	TE annotation using the EDTA library has finished! Check out:
-				Whole-genome TE annotation (total TE: 70.41%): Sbicolor_454_v3.0.1.fa.mod.EDTA.TEanno.gff3
-				Whole-genome TE annotation summary: Sbicolor_454_v3.0.1.fa.mod.EDTA.TEanno.sum
-				Low-threshold TE masking for MAKER gene annotation (masked: 48.24%): Sbicolor_454_v3.0.1.fa.mod.MAKER.masked
-
-Sat May  7 14:03:10 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
+Thu May 19 08:11:24 PDT 2022	Evaluate the level of inconsistency for whole-genome TE annotation (slow step):
 

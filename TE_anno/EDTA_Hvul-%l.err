@@ -1,29 +1,28 @@
-Fri May  6 12:57:02 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
+Wed May 18 19:30:08 PDT 2022	EDTA_raw: Check dependencies, prepare working directories.
 
-Fri May  6 12:57:13 PDT 2022	Start to find LTR candidates.
+Wed May 18 19:30:18 PDT 2022	Start to find LTR candidates.
 
-Fri May  6 12:57:13 PDT 2022	Existing result file HvulgareMorex_702_V3.fa.mod.LTR.raw.fa found!
+Wed May 18 19:30:18 PDT 2022	Existing result file HvulgareMorex_702_V3.fa.mod.LTR.raw.fa found!
 				Will keep this file without rerunning this module.
 				Please specify --overwrite 1 if you want to rerun this module.
 
-Fri May  6 12:57:14 PDT 2022	Finish finding LTR candidates.
+Wed May 18 19:30:22 PDT 2022	Finish finding LTR candidates.
 
-Fri May  6 12:57:14 PDT 2022	Start to find TIR candidates.
+Wed May 18 19:30:22 PDT 2022	Start to find TIR candidates.
 
-Fri May  6 12:57:14 PDT 2022	Existing result file HvulgareMorex_702_V3.fa.mod.TIR.raw.fa found!
+Wed May 18 19:30:22 PDT 2022	Existing result file HvulgareMorex_702_V3.fa.mod.TIR.raw.fa found!
 				Will keep this file without rerunning this module.
 				Please specify --overwrite 1 if you want to rerun this module.
 
-Fri May  6 12:57:14 PDT 2022	Finish finding TIR candidates.
+Wed May 18 19:30:23 PDT 2022	Finish finding TIR candidates.
 
-Fri May  6 12:57:14 PDT 2022	Start to find Helitron candidates.
+Wed May 18 19:30:23 PDT 2022	Start to find Helitron candidates.
 
-Fri May  6 12:57:14 PDT 2022	Existing result file HvulgareMorex_702_V3.fa.mod.Helitron.raw.fa found!
+Wed May 18 19:30:23 PDT 2022	Existing result file HvulgareMorex_702_V3.fa.mod.Helitron.raw.fa found!
 				Will keep this file without rerunning this module.
 				Please specify --overwrite 1 if you want to rerun this module.
 
-Fri May  6 12:57:14 PDT 2022	Finish finding Helitron candidates.
+Wed May 18 19:30:25 PDT 2022	Finish finding Helitron candidates.
 
-Fri May  6 12:57:14 PDT 2022	Execution of EDTA_raw.pl is finished!
+Wed May 18 19:30:25 PDT 2022	Execution of EDTA_raw.pl is finished!
 
-slurmstepd: error: *** JOB 3035866 ON exvivo002 CANCELLED AT 2022-05-12T12:56:37 DUE TO TIME LIMIT ***
