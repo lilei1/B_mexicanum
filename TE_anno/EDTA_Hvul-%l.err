@@ -26,3 +26,4 @@ Wed May 18 19:30:25 PDT 2022	Finish finding Helitron candidates.
 
 Wed May 18 19:30:25 PDT 2022	Execution of EDTA_raw.pl is finished!
 
+slurmstepd: error: *** JOB 3062075 ON exvivo003 CANCELLED AT 2022-05-25T19:29:46 DUE TO TIME LIMIT ***
