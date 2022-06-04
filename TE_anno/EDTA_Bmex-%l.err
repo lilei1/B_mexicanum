@@ -143,3 +143,4 @@ mixture         mixture                      22              0              0   
 2022-05-19 03:05:10,685 -INFO- cleaning the temporary directory ./tmp
 Thu May 19 04:10:10 PDT 2022	Homology-based annotation of TEs using Bmexicanum_577_v1.0.fa.mod.EDTA.TElib.fa from scratch.
 
+slurmstepd: error: *** JOB 3062076 ON exvivo013 CANCELLED AT 2022-05-25T19:29:46 DUE TO TIME LIMIT ***
